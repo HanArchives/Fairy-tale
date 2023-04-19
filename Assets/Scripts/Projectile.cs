@@ -6,16 +6,50 @@ public class Projectile : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public bool isCloseRange;
+    public bool isLongRange;
+
+    public float projectileSpeed;
+    public float destroyTime;
+
+    public float destroyTimer;
+    public bool willBeDestroyed;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * 10f), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * 10f), 1f));
+
+        if (isLongRange)
+        {
+            //rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+            rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+        }
+
+        if (isCloseRange)
+        {
+            //rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+            rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+            DestroyObject();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (willBeDestroyed == true)
+        {
+            destroyTimer += Time.deltaTime;
+
+            if (destroyTimer >= destroyTime)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void DestroyObject()
+    {
+        willBeDestroyed = true;
     }
 }

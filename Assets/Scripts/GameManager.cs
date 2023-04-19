@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     //Dont Destroy Objects
     public Player player;
     public Camera cam;
+    public Wand wand;
 
 
     // Scenes
@@ -70,23 +71,23 @@ public class GameManager : MonoBehaviour
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6f, camSpeed);
 
-            if(GameManager.instance.player.isSpeedBoosting)
+            if (GameManager.instance.player.isSpeedBoosting)
             {
                 cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 7f, camSpeed);
             }
 
-            if(isPushing)
+            if (isPushing)
             {
                 cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 4f, camSpeed);
             }
 
-            if(isCasting)
+            if (isCasting)
             {
                 cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 8f, camSpeed);
 
                 camTimer += Time.deltaTime;
 
-                if(camTimer >= 0.5f)
+                if (camTimer >= 0.5f)
                 {
                     isCasting = false;
                     camTimer = 0;
