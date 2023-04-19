@@ -21,11 +21,31 @@ public class Wand : MonoBehaviour
         if (GameManager.instance.player.horizontalInput == 1)
         {
             wandPosition.transform.localPosition = new Vector3(1, 0, 0);
+
+            if (GameManager.instance.player.horizontalInput == 1 && GameManager.instance.player.verticalInput == 1)
+            {
+                wandPosition.transform.localPosition = new Vector3(1, 1, 0);
+            }
+
+            if (GameManager.instance.player.horizontalInput == 1 && GameManager.instance.player.verticalInput == -1)
+            {
+                wandPosition.transform.localPosition = new Vector3(1, -1, 0);
+            }
         }
 
         if (GameManager.instance.player.horizontalInput == -1)
         {
             wandPosition.transform.localPosition = new Vector3(1, 0, 0);
+
+            if (GameManager.instance.player.horizontalInput == -1 && GameManager.instance.player.verticalInput == 1)
+            {
+                wandPosition.transform.localPosition = new Vector3(1, 1, 0);
+            }
+
+            if (GameManager.instance.player.horizontalInput == -1 && GameManager.instance.player.verticalInput == -1)
+            {
+                wandPosition.transform.localPosition = new Vector3(1, -1, 0);
+            }
         }
 
         if (GameManager.instance.player.verticalInput == 1)
@@ -39,25 +59,6 @@ public class Wand : MonoBehaviour
         }
 
         //SCHUIN
-        if (GameManager.instance.player.horizontalInput == 1 && GameManager.instance.player.verticalInput == 1)
-        {
-            wandPosition.transform.localPosition = new Vector3(1, 1, 0);
-        }
-
-        if (GameManager.instance.player.horizontalInput == 1 && GameManager.instance.player.verticalInput == -1)
-        {
-            wandPosition.transform.localPosition = new Vector3(1, -1, 0);
-        }
-
-        if (GameManager.instance.player.horizontalInput == -1 && GameManager.instance.player.verticalInput == 1)
-        {
-            wandPosition.transform.localPosition = new Vector3(1, 1, 0);
-        }
-
-        if (GameManager.instance.player.horizontalInput == -1 && GameManager.instance.player.verticalInput == -1)
-        {
-            wandPosition.transform.localPosition = new Vector3(1, -1, 0);
-        }
     }
 
     public void FixedUpdate()
