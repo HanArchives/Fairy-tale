@@ -8,16 +8,18 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public float speed; // Movespeed of the enemy
 
-    public Vector3 playerposition;
-    public Vector3 enemyposition;
+    private Vector3 playerposition;
+    private Vector3 enemyposition;
 
-    public float enemyYposition;
-    public float enemyXposition;
+    private float enemyYposition;
+    private float enemyXposition;
 
     public float distance; // Distance between player and enemy
     public float followDistance;
 
-    public int damageToGive = 1; // Amount of damage the enemy does
+    public float damageToGive = 1; // Amount of damage the enemy does
+
+    public GameObject enemyUI;
 
     void Start()
     {
@@ -50,11 +52,13 @@ public class Enemy : MonoBehaviour
         if (player.transform.position.x > enemyXposition)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
+            enemyUI.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (player.transform.position.x < enemyXposition)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0); // Resets sprite direction
+            enemyUI.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
@@ -67,6 +71,8 @@ public class Enemy : MonoBehaviour
             Vector3 hitDirection = col.transform.position - transform.position; // Calculates the pushback direction of the player when taking a hit
             hitDirection = hitDirection.normalized;
             //FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection); // Function for the player to take damage
+
+            GameManager.instance.playerHealth -= damageToGive;
         }
     }
 }

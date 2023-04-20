@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHitbox : MonoBehaviour
 {
+    public Enemy enemy;
     public GameObject thisEnemy;
     public BoxCollider2D thisEnemyColl;
+    public KnockBack knockBack;
 
     public float enemyMaxHealth;
     public float enemyCurrentHealth;
+
+    public Text enemyHealthText; 
 
     //public Weapon weapon;
 
@@ -18,12 +23,36 @@ public class EnemyHitbox : MonoBehaviour
         //weapon = GameObject.Find("Hammer").GetComponent<Weapon>();
     }
 
+    public void Update()
+    {
+        if(enemyCurrentHealth == enemyMaxHealth)
+        {
+            enemyHealthText.text = "";
+        }
+
+        if (enemyCurrentHealth != enemyMaxHealth)
+        {
+            enemyHealthText.text = enemyCurrentHealth + " / " + enemyMaxHealth;
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Weapon" || other.tag == "PlayerProjectile") // Checks if the weapon hits the enemy's hitbox
-            enemyCurrentHealth = (enemyCurrentHealth - 1f); // Calculates the amount of damage done
+        if (other.tag == "PlayerProjectile") // Checks if the weapon hits the enemy's hitbox
+        {
+            enemyCurrentHealth = (enemyCurrentHealth - GameManager.instance.spellDamage); // Calculates the amount of damage done
+            
+            knockBack.KnockbackEnemy();
 
-        if (enemyCurrentHealth <= 0) // Checks if the enemy is killed
+        }
+
+        if (other.tag == "GroundLay") // Checks if the weapon hits the enemy's hitbox
+        {
+            enemyCurrentHealth = (enemyCurrentHealth - GameManager.instance.spellDamage); // Calculates the amount of damage done
+            enemy.speed = 0.5f;
+        }
+
+        if (enemyCurrentHealth <= 0f) // Checks if the enemy is killed
         {
             Destroy(thisEnemy); // Destroys the enemy
             Destroy(gameObject); // Destroys the hitbox GameObject

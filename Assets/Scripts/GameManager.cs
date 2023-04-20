@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     public Camera cam;
     public Wand wand;
 
-
     // Scenes
     enum Scenes { SampleScene };
     public string sceneName;
@@ -53,6 +52,16 @@ public class GameManager : MonoBehaviour
     public bool isCasting;
     public float camTimer;
 
+    // Magic
+    public ShootProjectile shootProjectile;
+    public bool canCast;
+
+    // Player stats
+    public float spellDamage;
+    public float playerHealth;
+    public float playerMaxHealth;
+    public Text healthText;
+
     void Start()
     {
         //spawnPoint = GameObject.Find("spawnPoint").transform.position;
@@ -61,7 +70,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
 
+        if(playerHealth <= 0)
+        {
+            Respawn();
+        }
     }
 
     public void LateUpdate()
@@ -99,6 +113,12 @@ public class GameManager : MonoBehaviour
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5f, camSpeed);
         }
+    }
+
+    public void Respawn()
+    {
+        playerHealth = playerMaxHealth;
+        player.transform.position = spawnPoint;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

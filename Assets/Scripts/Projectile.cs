@@ -23,13 +23,13 @@ public class Projectile : MonoBehaviour
         if (isLongRange)
         {
             //rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
-            rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+            //rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
         }
 
         if (isCloseRange)
         {
             //rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
-            rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
+            //rb.AddForce(new Vector3(GameManager.instance.wand.wandPosition.transform.position.x * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.wand.wandPosition.transform.position.y * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));
             DestroyObject();
         }
     }
