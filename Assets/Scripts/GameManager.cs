@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Camera cam;
     public Wand wand;
+    public DialogueManager dialogueManager;
 
     // Scenes
     enum Scenes { SampleScene };
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5f, camSpeed);
         }
+
     }
 
     public void Respawn()
