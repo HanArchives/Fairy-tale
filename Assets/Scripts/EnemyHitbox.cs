@@ -43,6 +43,7 @@ public class EnemyHitbox : MonoBehaviour
             enemyCurrentHealth = (enemyCurrentHealth - GameManager.instance.spellDamage); // Calculates the amount of damage done
             
             knockBack.KnockbackEnemy();
+            GameManager.instance.isBattling = true;
 
         }
 
@@ -56,6 +57,7 @@ public class EnemyHitbox : MonoBehaviour
         {
             Destroy(thisEnemy); // Destroys the enemy
             Destroy(gameObject); // Destroys the hitbox GameObject
+            GameManager.instance.isBattling = false;
 
         }
         else // What happens when the enemy isn't killed, but is hit

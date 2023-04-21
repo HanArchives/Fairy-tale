@@ -21,7 +21,8 @@ public class KnockBack : MonoBehaviour
         // If the knockback timer is greater than zero, apply knockback force to the enemy
         if (knockbackTimer > 0f)
         {
-            rb.velocity = -transform.right * knockbackForce;
+            //rb.velocity = -transform.right * knockbackForce;
+            rb.velocity = -GameManager.instance.player.transform.position * knockbackForce;
             knockbackTimer -= Time.deltaTime;
         }
         // Otherwise, stop applying knockback force

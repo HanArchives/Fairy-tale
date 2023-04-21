@@ -48,9 +48,12 @@ public class GameManager : MonoBehaviour
 
     // Camera states
     public float camSpeed;
+    public float regularCamSpeed;
     public bool isWalking;
     public bool isPushing;
     public bool isCasting;
+    public bool isBattling;
+    public bool isTalking;
     public float camTimer;
 
     // Magic
@@ -67,6 +70,8 @@ public class GameManager : MonoBehaviour
     {
         //spawnPoint = GameObject.Find("spawnPoint").transform.position;
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        regularCamSpeed = camSpeed;
     }
 
     void Update()
@@ -96,18 +101,27 @@ public class GameManager : MonoBehaviour
                 cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 4f, camSpeed);
             }
 
-            if (isCasting)
+            if (isTalking)
             {
-                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 8f, camSpeed);
-
-                camTimer += Time.deltaTime;
-
-                if (camTimer >= 0.5f)
-                {
-                    isCasting = false;
-                    camTimer = 0;
-                }
+                camSpeed = 0.01f;
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3f, camSpeed);
             }
+        }
+
+        if(isTalking)
+        {
+            camSpeed = 0.01f;
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3f, camSpeed);
+        }
+
+        if(!isTalking)
+        {
+            camSpeed = regularCamSpeed;
+        }
+
+        if (isBattling)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 7f, camSpeed);
         }
 
         else

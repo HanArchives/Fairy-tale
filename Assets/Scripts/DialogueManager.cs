@@ -38,6 +38,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsActive", true); // Opens the dialogue box
         animator3.SetBool("IsActive", false); // Disappears the "Talk" text pop-up
 
+        GameManager.instance.isTalking = true;
+
         nameText.text = dialogue.npcname;
 
         sentences.Clear();
@@ -79,5 +81,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         animator.SetBool("IsActive", false); // Closes the dialogue box
+        GameManager.instance.isTalking = false;
     }
 }
