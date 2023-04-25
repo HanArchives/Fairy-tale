@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Animator animator; // Animator for the DialogueBox
     public Animator animator3; // Animator for the "Talk" text pop-up above an NPC
 
-    private Queue<string> sentences;
+    public Queue<string> sentences;
 
 
     void Awake()

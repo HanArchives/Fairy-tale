@@ -8,9 +8,10 @@ public class TalkButton : MonoBehaviour
     public Animator anim;
     public Dialogue dialogueOption;
     public DialogueTrigger dialogueTrigger;
+    public DialogueManager dialogueManager;
 
-    private bool isPlayerNear; // Checks if the player is in range of the NPC
-    private bool isPlayerTalking; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
+    public bool isPlayerNear; // Checks if the player is in range of the NPC
+    public bool isPlayerTalking; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
 
     private float talkTimer;
 
@@ -19,15 +20,18 @@ public class TalkButton : MonoBehaviour
         //anim = GameObject.Find("NPCCanvas").GetComponent<Animator>();
         dialogueTrigger = GameObject.Find("TalkButton").GetComponent<DialogueTrigger>(); // Finds the button that can activate the dialoguebox
         isPlayerTalking = false;
+        dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && isPlayerNear == true) // If left shift is pressed and the player is in range
+        if (Input.GetKeyDown(KeyCode.T) && isPlayerNear == true && isPlayerTalking == false) // If left shift is pressed and the player is in range
         {
             dialogueTrigger.TriggerDialogue(); // Starts the dialogue
 
             TalkTimer(); // Starts the timer
+
+            //isPlayerTalking = true; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
 
             if (talkTimer >= 0.015) // If this amount of time passes
             {
@@ -42,7 +46,17 @@ public class TalkButton : MonoBehaviour
         {
             isPlayerNear = false; // Makes sure the player doesn't start up the dialogue again from the start
 
-            GameManager.instance.dialogueManager.DisplayNextSentence(); // Player can continue to the next sentence
+            if (dialogueManager.sentences.Count == 0)
+            {
+                dialogueManager.EndDialogue();
+            }
+
+            else
+            {
+                dialogueManager.DisplayNextSentence(); // Player can continue to the next sentence
+            }
+            //FindObjectOfType<DialogueManager>().DisplayNextSentence();
+
         }
 
     }
