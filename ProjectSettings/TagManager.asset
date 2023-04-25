@@ -47,6 +47,9 @@ TagManager:
   - name: Buildings
     uniqueID: 3271708223
     locked: 0
+  - name: Player
+    uniqueID: 2409131083
+    locked: 0
   - name: WorldUI
     uniqueID: 790098057
     locked: 0
