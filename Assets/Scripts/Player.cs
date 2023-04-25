@@ -28,10 +28,14 @@ public class Player: MonoBehaviour
 	public float speedBoostTimer;
 	public float speedBoostTime;
 
+	public Animator anim;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		regularMovementSpeed = movementSpeed;
+
+		anim = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -107,10 +111,27 @@ public class Player: MonoBehaviour
 		if (horizontalInput > 0)    //If player is moving towards right but is facing left,
 		{       // or if player is moving towards left but is facing right,
 			transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
+			anim.SetBool("IsRunning", true);
 		}
 		if (horizontalInput < 0)
 		{
 			transform.localRotation = Quaternion.Euler(0, 180, 0); // Swaps sprite direction
+			anim.SetBool("IsRunning", true);
+		}
+
+		if(verticalInput > 0)
+        {
+			anim.SetBool("IsRunning", true);
+
+		}
+		if (verticalInput < 0)
+        {
+			anim.SetBool("IsRunning", true);
+		}
+
+		if (horizontalInput == 0 && verticalInput == 0)
+        {
+			anim.SetBool("IsRunning", false);
 		}
 
 		if (doJump)
