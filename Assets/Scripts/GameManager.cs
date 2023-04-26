@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(cam.gameObject);
+            Destroy(dialogueManager.gameObject);
+            Destroy(HUD.gameObject);
 
             return;
         }
@@ -30,8 +32,8 @@ public class GameManager : MonoBehaviour
     //Dont Destroy Objects
     public Player player;
     public Camera cam;
-    public Wand wand;
     public DialogueManager dialogueManager;
+    public GameObject HUD;
 
     // Scenes
     enum Scenes { SampleScene };

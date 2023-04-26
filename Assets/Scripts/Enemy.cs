@@ -8,11 +8,11 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public float speed; // Movespeed of the enemy
 
-    private Vector3 playerposition;
-    private Vector3 enemyposition;
+    public Vector3 playerposition;
+    public Vector3 enemyposition;
 
-    private float enemyYposition;
-    private float enemyXposition;
+    public float enemyYposition;
+    public float enemyXposition;
 
     public float distance; // Distance between player and enemy
     public float followDistance;
@@ -25,6 +25,11 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.Find("Player");
         rigid = GetComponent<Rigidbody2D>();
+    }
+
+    public void Update()
+    {
+        enemyXposition = rigid.transform.position.x;
     }
 
     void FixedUpdate()

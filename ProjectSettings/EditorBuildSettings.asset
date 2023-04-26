@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Copy_SampleScene.unity
     guid: a4184fffbb539f14999822d77ccfa6d3
+  - enabled: 1
+    path: Assets/Scenes/InteriorTest.unity
+    guid: b773362e6bf26a14497fde14052de917
   m_configObjects: {}

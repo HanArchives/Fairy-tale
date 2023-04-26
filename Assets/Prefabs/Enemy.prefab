@@ -206,6 +206,8 @@ MonoBehaviour:
   rigid: {fileID: 0}
   player: {fileID: 0}
   speed: 1
+  playerposition: {x: 0, y: 0, z: 0}
+  enemyposition: {x: 0, y: 0, z: 0}
   distance: 0
   followDistance: 10
   damageToGive: 1
@@ -420,6 +422,9 @@ MonoBehaviour:
   knockbackForce: 0.1
   knockbackDuration: 0.5
   rb: {fileID: 812367637038151599}
+  enemy: {fileID: 4501050479501575893}
+  playerPosition: {x: 0, y: 0, z: 0}
+  enemyPosition: {x: 0, y: 0, z: 0}
 --- !u!58 &2266634530233238344
 CircleCollider2D:
   m_ObjectHideFlags: 0
