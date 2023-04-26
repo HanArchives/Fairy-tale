@@ -122,7 +122,6 @@ GameObject:
   - component: {fileID: 6600595264129258094}
   - component: {fileID: 1312406774878175209}
   - component: {fileID: 278767982232595540}
-  - component: {fileID: 4985600923541340393}
   m_Layer: 0
   m_Name: Lantern
   m_TagString: Untagged
@@ -220,26 +219,12 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-<<<<<<< HEAD
---- !u!114 &4985600923541340393
-MonoBehaviour:
-=======
 --- !u!1 &8465088189591364667
 GameObject:
->>>>>>> 4c5202669150737288be65f418d0beafa48863a6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 5504730284928842683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56551780efd7a8449847d49a735c519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationSpeed: 1
-=======
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5260736691661783000}
@@ -311,4 +296,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2592225, y: 1.8932903}
   m_EdgeRadius: 0
->>>>>>> 4c5202669150737288be65f418d0beafa48863a6
