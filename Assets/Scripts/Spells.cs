@@ -16,19 +16,29 @@ public class Spells : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonUp(0))
         {
-            Spell1();
+            //Spell1();
+            GameManager.instance.shootProjectile.projectilePrefab = spellPrefabs[0];
+            GameManager.instance.shootProjectile.projectileSpeed = 2f; // The speed at which the projectile is launched
+            //GameManager.instance.canCast = true;
+            GameManager.instance.spellDamage = 1f;
+            GameManager.instance.shootProjectile.CastSpell();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonUp(1))
         {
-            Spell2();
+            //Spell2();
+            GameManager.instance.shootProjectile.projectilePrefab = spellPrefabs[1];
+            GameManager.instance.shootProjectile.projectileSpeed = 6f; // The speed at which the projectile is launched
+            //GameManager.instance.canCast = true;
+            GameManager.instance.spellDamage = 0.5f;
+            GameManager.instance.shootProjectile.CastSpell();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Spell3();
+            //Spell3();
         }
 
     }

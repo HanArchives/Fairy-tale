@@ -13,9 +13,12 @@ public class EnemyHitbox : MonoBehaviour
     public float enemyMaxHealth;
     public float enemyCurrentHealth;
 
-    public Text enemyHealthText; 
+    public Text enemyHealthText;
 
     //public Weapon weapon;
+
+    public bool isWizardEnemy;
+    public GameObject dropPage;
 
     void Start()
     {
@@ -58,6 +61,12 @@ public class EnemyHitbox : MonoBehaviour
             Destroy(thisEnemy); // Destroys the enemy
             Destroy(gameObject); // Destroys the hitbox GameObject
             GameManager.instance.isBattling = false;
+
+            if(isWizardEnemy)
+            {
+                GameObject a = dropPage;
+                Instantiate(a, transform.position, Quaternion.identity);
+            }
 
         }
         else // What happens when the enemy isn't killed, but is hit

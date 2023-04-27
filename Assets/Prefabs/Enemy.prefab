@@ -208,6 +208,8 @@ MonoBehaviour:
   speed: 1
   playerposition: {x: 0, y: 0, z: 0}
   enemyposition: {x: 0, y: 0, z: 0}
+  enemyYposition: 0
+  enemyXposition: 0
   distance: 0
   followDistance: 10
   damageToGive: 1
@@ -407,6 +409,8 @@ MonoBehaviour:
   enemyMaxHealth: 3
   enemyCurrentHealth: 3
   enemyHealthText: {fileID: 6257423426167832305}
+  isWizardEnemy: 0
+  dropPage: {fileID: 4695412763098798944, guid: bba8caa7235d55f49b7d4c9e079c78ee, type: 3}
 --- !u!114 &4390571659910591872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +429,9 @@ MonoBehaviour:
   enemy: {fileID: 4501050479501575893}
   playerPosition: {x: 0, y: 0, z: 0}
   enemyPosition: {x: 0, y: 0, z: 0}
+  newPosition: {x: 0, y: 0, z: 0}
+  newPositionX: 0
+  newPositionY: 0
 --- !u!58 &2266634530233238344
 CircleCollider2D:
   m_ObjectHideFlags: 0

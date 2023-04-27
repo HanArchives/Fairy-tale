@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
     public Vector3 spawnPoint;
 
     // Items
-    public int coins;
+    public int pages;
+    public Text pagesText;
 
     // Camera states
     public float camSpeed;
@@ -80,9 +81,51 @@ public class GameManager : MonoBehaviour
     {
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
 
+        pagesText.text = "Pages: " + pages;
+
+        if(playerHealth > playerMaxHealth)
+        {
+            playerHealth = playerMaxHealth;
+        }
+
         if(playerHealth <= 0)
         {
             Respawn();
+        }
+
+        if(pages == 0)
+        {
+            playerMaxHealth = 9;
+        }
+
+        if (pages == 1)
+        {
+            playerMaxHealth = 8;
+        }
+
+        if (pages == 2)
+        {
+            playerMaxHealth = 7;
+        }
+
+        if (pages == 3)
+        {
+            playerMaxHealth = 6;
+        }
+
+        if (pages == 4)
+        {
+            playerMaxHealth = 5;
+        }
+
+        if (pages == 5)
+        {
+            playerMaxHealth = 4;
+        }
+
+        if (pages == 6)
+        {
+            playerMaxHealth = 3;
         }
     }
 
@@ -161,11 +204,16 @@ public class GameManager : MonoBehaviour
         previousScene = scene.buildIndex; // Keeps track of what the previousscene was
     }
 
+    public void AddPage()
+    {
+        pages++;
+    }
+
     public void SaveState()
     {
         string s = "";
 
-        s += coins.ToString() + "|"; // Saves the amount of coins
+        s += pages.ToString() + "|"; // Saves the amount of coins
 
         PlayerPrefs.SetString("SaveState", s);
     }
@@ -186,7 +234,7 @@ public class GameManager : MonoBehaviour
 
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
-        coins = int.Parse(data[0]); // Loads the amount of coins
+        pages = int.Parse(data[0]); // Loads the amount of coins
 
     }
 
