@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
+    public GameObject spawnAnim;
+
+    public Animator spellBookAnim;
+
     public GameObject closeRangeProjectile;
     public GameObject longRangeProjectile;
     public GameObject groundLay;

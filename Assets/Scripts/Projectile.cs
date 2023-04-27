@@ -15,6 +15,8 @@ public class Projectile : MonoBehaviour
     public float destroyTimer;
     public bool willBeDestroyed;
 
+    public GameObject smokeObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +46,17 @@ public class Projectile : MonoBehaviour
             if (destroyTimer >= destroyTime)
             {
                 Destroy(gameObject);
+                GameObject a = smokeObject;
+                Instantiate(a, transform.position, Quaternion.identity);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+        GameObject a = smokeObject;
+        Instantiate(a, transform.position, Quaternion.identity);
     }
 
     public void DestroyObject()

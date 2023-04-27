@@ -36,6 +36,9 @@ public class Player: MonoBehaviour
 	public SpriteRenderer glassesRenderer;
 	public SpriteRenderer hairRenderer;
 
+	public GameObject smokeObject;
+	public Animator spellBookAnim;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -53,6 +56,12 @@ public class Player: MonoBehaviour
 		{   //If jump button is pressed,
 
 			isSpeedBoosting = true;
+
+			anim.SetTrigger("Boost");
+			//spellBookAnim.SetTrigger("Fire");
+
+			GameObject a = smokeObject;
+			Instantiate(a, transform.position, Quaternion.identity);
 
 			/*
 			if (isGrounded)
@@ -80,6 +89,8 @@ public class Player: MonoBehaviour
 				movementSpeed = regularMovementSpeed;
 				speedBoostTimer = 0;
 				isSpeedBoosting = false;
+				GameObject a = smokeObject;
+				Instantiate(a, transform.position, Quaternion.identity);
 			}
 		}
 
