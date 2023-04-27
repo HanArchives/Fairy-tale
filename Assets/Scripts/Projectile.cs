@@ -54,10 +54,27 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag != "Player")
+        {
+            Destroy(gameObject);
+            GameObject a = smokeObject;
+            Instantiate(a, transform.position, Quaternion.identity);
+
+            //Debug.Log(collision);
+        }
+
+    }
+
+    /*
+    private void OnCollide2D(Collision2D collision)
+    {
         Destroy(gameObject);
         GameObject a = smokeObject;
         Instantiate(a, transform.position, Quaternion.identity);
+
+        Debug.Log(collision);
     }
+    */
 
     public void DestroyObject()
     {

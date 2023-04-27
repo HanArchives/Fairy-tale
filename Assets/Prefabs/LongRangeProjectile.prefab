@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7186286281359337473}
   - component: {fileID: 8461663614693364842}
   - component: {fileID: 8146800733280263002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LongRangeProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -168,9 +168,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12013346}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.37013346
 --- !u!95 &8146800733280263002
 Animator:
   serializedVersion: 5
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5406193726392141437}
   - component: {fileID: 4319516048082550963}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0, g: 0.8809228, b: 1, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000003f4e02c34b6c988f89f0172f

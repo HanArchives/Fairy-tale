@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InteriorTest.unity
     guid: b773362e6bf26a14497fde14052de917
   - enabled: 1
+    path: Assets/Scenes/Battle1.unity
+    guid: ea6531befb06e9446b34db78bc8a0ee1
+  - enabled: 1
     path: Assets/Scenes/Copy_SampleScene.unity
     guid: a4184fffbb539f14999822d77ccfa6d3
   m_configObjects: {}

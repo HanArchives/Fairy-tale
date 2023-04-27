@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public GameObject HUD;
 
     // Scenes
-    enum Scenes { SampleScene, InteriorTest };
+    enum Scenes { SampleScene, InteriorTest, Battle1 };
     public string sceneName;
     public int previousScene = 0;
     public int index;
@@ -149,6 +149,11 @@ public class GameManager : MonoBehaviour
         }
 
         if (scene.buildIndex == (int)Scenes.InteriorTest)
+        {
+            player.transform.position = (spawnPoint);
+        }
+
+        if (scene.buildIndex == (int)Scenes.Battle1)
         {
             player.transform.position = (spawnPoint);
         }

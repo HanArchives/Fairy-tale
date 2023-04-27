@@ -6,6 +6,7 @@ public class FollowMouse : MonoBehaviour
 {
     public Transform player;
     public float radius = 2f;
+    public float minRadius;
     public float speed = 1f;
 
     public Vector3 offset;
@@ -25,7 +26,7 @@ public class FollowMouse : MonoBehaviour
         float angle = Time.deltaTime * speed;
 
         //Vector3 targetPosition = player.position + new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle)) * radius;
-        Vector3 targetPosition = player.position + ((mousePosition) * radius);
+        Vector3 targetPosition = (player.position) + ((mousePosition) * (radius + minRadius));
         transform.position = targetPosition + offset;
     }
 }

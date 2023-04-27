@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078007863015463451}
   - component: {fileID: 7471555312441443300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7186286281359337473}
   - component: {fileID: 7632733953653764723}
   - component: {fileID: 9146861976586141988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CloseRangeProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -279,9 +279,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.08487368}
   serializedVersion: 2
-  m_Radius: 0.375
+  m_Radius: 0.45987368
 --- !u!95 &9146861976586141988
 Animator:
   serializedVersion: 5

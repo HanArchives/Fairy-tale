@@ -15,6 +15,9 @@ public class TalkButton : MonoBehaviour
 
     public float talkTimer;
 
+    public bool isBattleEnemy;
+    public GameObject spawnEnemy;
+
     void Start()
     {
         //anim = GameObject.Find("NPCCanvas").GetComponent<Animator>();
@@ -62,6 +65,13 @@ public class TalkButton : MonoBehaviour
             {
                 dialogueManager.EndDialogue();
                 //talkTimer = 0;
+
+                if(isBattleEnemy)
+                {
+                    Destroy(gameObject);
+                    GameObject a = spawnEnemy;
+                    Instantiate(a, transform.position, Quaternion.identity);
+                }
             }
 
             else
