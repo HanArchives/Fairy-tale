@@ -9,6 +9,12 @@ public class FollowMouse : MonoBehaviour
     public float minRadius;
     public float speed = 1f;
 
+    public float distanceFromOrigin;
+    public float maxRadius;
+    public float maxDistanceX;
+    public float maxDistanceY;
+    public float maxDistanceZ;
+
     public Vector3 offset;
 
     public Vector3 mousePosition;
@@ -25,8 +31,14 @@ public class FollowMouse : MonoBehaviour
 
         float angle = Time.deltaTime * speed;
 
-        //Vector3 targetPosition = player.position + new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle)) * radius;
-        Vector3 targetPosition = (player.position) + ((mousePosition) * (radius + minRadius));
-        transform.position = targetPosition + offset;
+            //offset = mousePosition - new Vector3(maxDistanceX, maxDistanceY, maxDistanceZ);
+
+            //Vector3 targetPosition = player.position + new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle)) * radius;
+            Vector3 targetPosition = (player.position) + ((mousePosition) * (radius));
+            //transform.position = targetPosition + offset;
+            transform.position = targetPosition + offset;
+
+
+
     }
 }

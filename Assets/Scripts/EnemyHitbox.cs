@@ -20,6 +20,9 @@ public class EnemyHitbox : MonoBehaviour
     public bool isWizardEnemy;
     public GameObject dropPage;
 
+
+    public GameObject destroyAnimation;
+
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth; // Makes sure the enemy is at full HP when spawning
@@ -61,8 +64,10 @@ public class EnemyHitbox : MonoBehaviour
             Destroy(thisEnemy); // Destroys the enemy
             Destroy(gameObject); // Destroys the hitbox GameObject
             GameManager.instance.isBattling = false;
+            GameObject b = destroyAnimation;
+            Instantiate(b, transform.position, Quaternion.identity);
 
-            if(isWizardEnemy)
+            if (isWizardEnemy)
             {
                 GameObject a = dropPage;
                 Instantiate(a, transform.position, Quaternion.identity);

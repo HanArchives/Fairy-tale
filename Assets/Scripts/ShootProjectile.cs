@@ -70,7 +70,7 @@ public class ShootProjectile : MonoBehaviour
             // Set the velocity of the projectile
             projectile.GetComponent<Rigidbody2D>().velocity = launchDirection * projectileSpeed;
 
-            SpawnAnimationPlay();
+            //SpawnAnimationPlay();
             //}
         }
     }

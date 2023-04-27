@@ -411,6 +411,7 @@ MonoBehaviour:
   enemyHealthText: {fileID: 6257423426167832305}
   isWizardEnemy: 0
   dropPage: {fileID: 4695412763098798944, guid: bba8caa7235d55f49b7d4c9e079c78ee, type: 3}
+  destroyAnimation: {fileID: 7463820423841937999, guid: bff6376a101e84e40ab7908959c12f64, type: 3}
 --- !u!114 &4390571659910591872
 MonoBehaviour:
   m_ObjectHideFlags: 0

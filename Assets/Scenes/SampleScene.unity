@@ -87848,9 +87848,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1796731642}
   radius: 0.0015
-  minRadius: 0
+  minRadius: 1
   speed: 0.01
-  offset: {x: -1.5, y: -1.5, z: 0}
+  distanceFromOrigin: 0
+  maxRadius: 0
+  maxDistanceX: 0
+  maxDistanceY: 0
+  maxDistanceZ: 0
+  offset: {x: -2, y: -1, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2084766232
 GameObject:

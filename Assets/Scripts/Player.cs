@@ -60,8 +60,8 @@ public class Player: MonoBehaviour
 			anim.SetTrigger("Boost");
 			//spellBookAnim.SetTrigger("Fire");
 
-			GameObject a = smokeObject;
-			Instantiate(a, transform.position, Quaternion.identity);
+			//GameObject a = smokeObject;
+			//Instantiate(a, transform.position, Quaternion.identity);
 
 			/*
 			if (isGrounded)
@@ -89,8 +89,8 @@ public class Player: MonoBehaviour
 				movementSpeed = regularMovementSpeed;
 				speedBoostTimer = 0;
 				isSpeedBoosting = false;
-				GameObject a = smokeObject;
-				Instantiate(a, transform.position, Quaternion.identity);
+				//GameObject a = smokeObject;
+				//Instantiate(a, transform.position, Quaternion.identity);
 			}
 		}
 
@@ -131,7 +131,7 @@ public class Player: MonoBehaviour
 			anim.SetBool("IsRunning", true);
 
 			bodyRenderer.sprite = bodySprites[2];
-			bodyRenderer.size = new Vector2(2f, 2f);
+			bodyRenderer.size = new Vector2(2.15f, 2.15f);
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);
@@ -141,7 +141,7 @@ public class Player: MonoBehaviour
 			transform.localRotation = Quaternion.Euler(0, 180, 0); // Swaps sprite direction
 			anim.SetBool("IsRunning", true);
 			bodyRenderer.sprite = bodySprites[2];
-			bodyRenderer.size = new Vector2(2f, 2f);
+			bodyRenderer.size = new Vector2(2.15f, 2.15f);
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);

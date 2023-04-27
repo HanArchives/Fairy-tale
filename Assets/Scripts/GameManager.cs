@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
 
         if (isWalking)
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6f, camSpeed);
+            //cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6f, camSpeed);
 
             if (GameManager.instance.player.isSpeedBoosting)
             {
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
 
         else
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5f, camSpeed);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6f, camSpeed);
         }
 
     }
@@ -213,7 +213,7 @@ public class GameManager : MonoBehaviour
     {
         string s = "";
 
-        s += pages.ToString() + "|"; // Saves the amount of coins
+        //s += pages.ToString() + "|"; // Saves the amount of coins
 
         PlayerPrefs.SetString("SaveState", s);
     }
@@ -234,7 +234,7 @@ public class GameManager : MonoBehaviour
 
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
-        pages = int.Parse(data[0]); // Loads the amount of coins
+        //pages = int.Parse(data[0]); // Loads the amount of coins
 
     }
 
