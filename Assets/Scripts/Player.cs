@@ -30,6 +30,12 @@ public class Player: MonoBehaviour
 
 	public Animator anim;
 
+	public Sprite[] bodySprites;
+	public SpriteRenderer bodyRenderer;
+
+	public SpriteRenderer glassesRenderer;
+	public SpriteRenderer hairRenderer;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -112,26 +118,52 @@ public class Player: MonoBehaviour
 		{       // or if player is moving towards left but is facing right,
 			transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
 			anim.SetBool("IsRunning", true);
+
+			bodyRenderer.sprite = bodySprites[2];
+			bodyRenderer.size = new Vector2(2f, 2f);
+
+			glassesRenderer.size = new Vector2(0.75f, 0.75f);
+			hairRenderer.size = new Vector2(0.75f, 0.75f);
 		}
 		if (horizontalInput < 0)
 		{
 			transform.localRotation = Quaternion.Euler(0, 180, 0); // Swaps sprite direction
 			anim.SetBool("IsRunning", true);
+			bodyRenderer.sprite = bodySprites[2];
+			bodyRenderer.size = new Vector2(2f, 2f);
+
+			glassesRenderer.size = new Vector2(0.75f, 0.75f);
+			hairRenderer.size = new Vector2(0.75f, 0.75f);
 		}
 
-		if(verticalInput > 0)
+		if (verticalInput > 0)
         {
 			anim.SetBool("IsRunning", true);
+			bodyRenderer.sprite = bodySprites[3];
+			bodyRenderer.size = new Vector2(2.25f, 2.25f);
 
+			glassesRenderer.size = new Vector2(0f, 0f);
+			hairRenderer.size = new Vector2(0f, 0f);
 		}
+
 		if (verticalInput < 0)
         {
 			anim.SetBool("IsRunning", true);
+			bodyRenderer.sprite = bodySprites[0];
+			bodyRenderer.size = new Vector2(2f, 2f);
+
+			glassesRenderer.size = new Vector2(0.75f, 0.75f);
+			hairRenderer.size = new Vector2(0.75f, 0.75f);
 		}
 
 		if (horizontalInput == 0 && verticalInput == 0)
         {
 			anim.SetBool("IsRunning", false);
+			bodyRenderer.sprite = bodySprites[0];
+			bodyRenderer.size = new Vector2(2f, 2f);
+
+			glassesRenderer.size = new Vector2(0.75f, 0.75f);
+			hairRenderer.size = new Vector2(0.75f, 0.75f);
 		}
 
 		if (doJump)

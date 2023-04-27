@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public GameObject HUD;
 
     // Scenes
-    enum Scenes { SampleScene };
+    enum Scenes { SampleScene, InteriorTest };
     public string sceneName;
     public int previousScene = 0;
     public int index;
@@ -144,6 +144,11 @@ public class GameManager : MonoBehaviour
 
         // Checks which spawnpoint the player needs to move to, from which scene to which scene
         if (scene.buildIndex == (int)Scenes.SampleScene)
+        {
+            player.transform.position = (spawnPoint);
+        }
+
+        if (scene.buildIndex == (int)Scenes.InteriorTest)
         {
             player.transform.position = (spawnPoint);
         }

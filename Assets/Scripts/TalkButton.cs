@@ -13,7 +13,7 @@ public class TalkButton : MonoBehaviour
     public bool isPlayerNear; // Checks if the player is in range of the NPC
     public bool isPlayerTalking; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
 
-    private float talkTimer;
+    public float talkTimer;
 
     void Start()
     {
@@ -25,20 +25,32 @@ public class TalkButton : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && isPlayerNear == true && isPlayerTalking == false) // If left shift is pressed and the player is in range
+        /*
+        if(isPlayerTalking == true)
+        {
+            talkTimer += Time.deltaTime;
+        }
+
+        if (talkTimer >= 0.015) // If this amount of time passes
+        {
+            talkTimer = 0;
+            isPlayerTalking = true; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
+        }
+        */
+
+        if (Input.GetKeyUp(KeyCode.T) && isPlayerNear == true && isPlayerTalking == false) // If left shift is pressed and the player is in range
         {
             dialogueTrigger.TriggerDialogue(); // Starts the dialogue
 
-            TalkTimer(); // Starts the timer
+            isPlayerTalking = true;
+
+            
+            //TalkTimer(); // Starts the timer
+
+
 
             //isPlayerTalking = true; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
-
-            if (talkTimer >= 0.015) // If this amount of time passes
-            {
-                talkTimer = 0;
-                isPlayerTalking = true; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
-            }
-
+            
 
         }
 
@@ -49,6 +61,7 @@ public class TalkButton : MonoBehaviour
             if (dialogueManager.sentences.Count == 0)
             {
                 dialogueManager.EndDialogue();
+                //talkTimer = 0;
             }
 
             else
@@ -82,7 +95,7 @@ public class TalkButton : MonoBehaviour
             anim.SetBool("IsActive", false);
             isPlayerNear = false;
             isPlayerTalking = false;
-            //GameManager.instance.dialogueManager.EndDialogue(); // Ends the dialogue when the player gets out of range of the NPC
+            dialogueManager.EndDialogue();
         }
 
     }
