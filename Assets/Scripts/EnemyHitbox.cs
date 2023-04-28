@@ -51,6 +51,7 @@ public class EnemyHitbox : MonoBehaviour
             enemyCurrentHealth = (enemyCurrentHealth - GameManager.instance.spellDamage); // Calculates the amount of damage done
 
             anim.SetTrigger("Hit");
+            SoundManager.PlaySound("enemyHitSound");
 
             knockBack.KnockbackEnemy();
             GameManager.instance.isBattling = true;

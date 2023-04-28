@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7673192989843990300}
   - component: {fileID: 4466314113869100935}
   - component: {fileID: 7694782209058768643}
+  - component: {fileID: 6382185124013460113}
   m_Layer: 0
   m_Name: SceneChangeDoor
   m_TagString: Untagged
@@ -135,6 +136,7 @@ MonoBehaviour:
   - InteriorTest
   anim: {fileID: 4607741751197646679}
   isInRange: 0
+  anim2: {fileID: 6382185124013460113}
 --- !u!61 &7694782209058768643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,8 +180,29 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 4, y: 5}
   m_EdgeRadius: 0
+--- !u!95 &6382185124013460113
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521443737084778984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5462e5befa2c934c9c8901582d9b628, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6058993721514151583
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a0626a6bee1d1d74baf1945b4cbb9475, type: 3}
     m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0

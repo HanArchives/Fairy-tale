@@ -34,6 +34,8 @@ public class Enemy : MonoBehaviour
     public bool isWalking;
     public float walkTimer;
 
+    public float combatStartTimer;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour
         if (projectileEnemy) // Check if the enemy shoots projectiles
         {
             CheckIfTimeToFire();
+            combatStartTimer += Time.deltaTime;
         }
     }
 
@@ -122,14 +125,18 @@ public class Enemy : MonoBehaviour
             //FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection); // Function for the player to take damage
 
             GameManager.instance.playerHealth -= damageToGive;
+
+            SoundManager.PlaySound("playerHurtSound");
+            GameManager.instance.player.anim.SetTrigger("Hurt");
         }
     }
 
     void CheckIfTimeToFire()
     {
-        if (distance < shootDistance) // Checks if the player is in range for the enemy to start shooting
+
+        if (distance < shootDistance)
         {
-            if (Time.time > nextFire)
+            if (Time.time > nextFire && combatStartTimer >= 2f)
             {
                 Instantiate(projectile, transform.position, Quaternion.identity); // Shoots a projectile
                 anim.SetTrigger("Attack");

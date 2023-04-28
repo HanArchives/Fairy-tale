@@ -67,6 +67,9 @@ public class EnemyProjectile : MonoBehaviour
             Instantiate(a, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
+            SoundManager.PlaySound("playerHurtSound");
+            GameManager.instance.player.anim.SetTrigger("Hurt");
+
             GameManager.instance.playerHealth -= damageToGive;
         }
 

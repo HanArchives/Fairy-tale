@@ -42,6 +42,18 @@ public class TalkButton : MonoBehaviour
         }
         */
 
+        if(isPlayerTalking)
+        {
+            //anim.SetBool("IsActive", false);
+            //GameManager.instance.canCast = false;
+        }
+
+        if (!isPlayerTalking)
+        {
+            //GameManager.instance.canCast = true;
+            //anim.SetBool("IsActive", true);
+        }
+
         if (Input.GetKeyUp(KeyCode.T) && isPlayerNear == true && isPlayerTalking == false) // If left shift is pressed and the player is in range
         {
             dialogueTrigger.TriggerDialogue(); // Starts the dialogue
@@ -49,14 +61,15 @@ public class TalkButton : MonoBehaviour
             isPlayerTalking = true;
 
             NPCanim.SetBool("IsTalking", true);
+            //anim.SetBool("IsActive", false);
 
-            
+
             //TalkTimer(); // Starts the timer
 
 
 
             //isPlayerTalking = true; // Checks if the player is talking to the NPC, can continue to the next sentence instead of starting the dialogue
-            
+
 
         }
 
@@ -75,6 +88,11 @@ public class TalkButton : MonoBehaviour
                     Destroy(gameObject);
                     GameObject a = spawnEnemy;
                     Instantiate(a, transform.position, Quaternion.identity);
+                }
+
+                if (!isBattleEnemy)
+                {
+                    dialogueManager.EndDialogue();
                 }
             }
 
@@ -108,9 +126,10 @@ public class TalkButton : MonoBehaviour
         {
             anim.SetBool("IsActive", false);
             isPlayerNear = false;
-            isPlayerTalking = false;
+            //isPlayerTalking = false;
             dialogueManager.EndDialogue();
             NPCanim.SetBool("IsTalking", false);
+            //anim.SetBool("IsActive", true);
         }
 
     }

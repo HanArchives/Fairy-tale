@@ -10,6 +10,8 @@ public class SceneChange : MonoBehaviour
     public Animator anim;
     public bool isInRange; // Can the player move through the door?
 
+    public Animator anim2;
+
     void Start()
     {
         isInRange = false;
@@ -19,12 +21,20 @@ public class SceneChange : MonoBehaviour
     {
         if (isInRange == true) // If the player can move through the door
         {
+            anim2.SetBool("IsActive", true);
+
             if (Input.GetKeyDown(KeyCode.T)) // If the left shift button is pressed
             {
                 ChangeScene();
             }
         }
+
+        if(isInRange == false)
+        {
+            anim2.SetBool("IsActive", false);
+        }
     }
+
 
     // Colliders of the interactzones around doors
     public void OnTriggerEnter2D(Collider2D other)

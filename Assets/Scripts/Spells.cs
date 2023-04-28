@@ -14,8 +14,23 @@ public class Spells : MonoBehaviour
 
     public GameObject[] spellPrefabs;
 
+    public float canCastAgainTimer;
+    public bool canCastAgainTimerRun;
+
     public void Update()
     {
+        if (canCastAgainTimerRun == true)
+        {
+            canCastAgainTimer += Time.deltaTime;
+
+            if (canCastAgainTimer >= 1f)
+            {
+                GameManager.instance.canCast = true;
+                canCastAgainTimerRun = false;
+                canCastAgainTimer = 0f;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonUp(0))
         {
             //Spell1();
@@ -24,6 +39,8 @@ public class Spells : MonoBehaviour
             //GameManager.instance.canCast = true;
             GameManager.instance.spellDamage = 1f;
             GameManager.instance.shootProjectile.CastSpell();
+            GameManager.instance.canCast = false;
+            canCastAgainTimerRun = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonUp(1))
@@ -34,6 +51,8 @@ public class Spells : MonoBehaviour
             //GameManager.instance.canCast = true;
             GameManager.instance.spellDamage = 0.5f;
             GameManager.instance.shootProjectile.CastSpell();
+            GameManager.instance.canCast = false;
+            canCastAgainTimerRun = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))

@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
             Destroy(dialogueManager.gameObject);
             Destroy(HUD.gameObject);
             Destroy(soundManager.gameObject);
+            Destroy(spawnPoint.gameObject);
+            Destroy(towerSpawnPoint.gameObject);
+
+            player.transform.position = (spawnPoint.position);
 
             return;
         }
@@ -45,7 +49,8 @@ public class GameManager : MonoBehaviour
 
     // SpawnPoints
     public GameObject spawnPoints;
-    public Vector3 spawnPoint;
+    public Transform spawnPoint;
+    public Transform towerSpawnPoint;
 
     // Items
     public int pages;
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour
                 walkTimer = 0;
             }
 
-            if(walkTimer == 0)
+            if(walkTimer == 0 && player.isSpeedBoosting == false)
             {
                 SoundManager.PlaySound("playerWalkSound");
             }
@@ -156,25 +161,25 @@ public class GameManager : MonoBehaviour
 
             if (GameManager.instance.player.isSpeedBoosting)
             {
-                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 7f, camSpeed);
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 7.25f, camSpeed);
             }
 
             if (isPushing)
             {
-                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 4f, camSpeed);
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5.5f, camSpeed);
             }
 
             if (isTalking)
             {
                 camSpeed = 0.01f;
-                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3f, camSpeed);
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 4.5f, camSpeed);
             }
         }
 
         if(isTalking)
         {
             camSpeed = 0.01f;
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3f, camSpeed);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 4.5f, camSpeed);
         }
 
         if(!isTalking)
@@ -189,7 +194,7 @@ public class GameManager : MonoBehaviour
 
         else
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6f, camSpeed);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 6.5f, camSpeed);
         }
 
     }
@@ -197,26 +202,33 @@ public class GameManager : MonoBehaviour
     public void Respawn()
     {
         playerHealth = playerMaxHealth;
-        player.transform.position = spawnPoint;
+        player.transform.position = spawnPoint.position;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
-        // Checks which spawnpoint the player needs to move to, from which scene to which scene
-        if (scene.buildIndex == (int)Scenes.SampleScene)
+        if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.Battle1)
         {
-            player.transform.position = (spawnPoint);
+            player.transform.position = (towerSpawnPoint.position);
         }
+
+        // Checks which spawnpoint the player needs to move to, from which scene to which scene
+
+        /*
+        if (scene.buildIndex == (int)Scenes.SampleScene && previousScene != (int)Scenes.Battle1)
+        {
+            player.transform.position = (spawnPoint.position);
+        } */
 
         if (scene.buildIndex == (int)Scenes.InteriorTest)
         {
-            player.transform.position = (spawnPoint);
+            player.transform.position = (spawnPoint.position);
         }
 
         if (scene.buildIndex == (int)Scenes.Battle1)
         {
-            player.transform.position = (spawnPoint);
+            player.transform.position = (spawnPoint.position);
         }
 
         previousScene = scene.buildIndex; // Keeps track of what the previousscene was

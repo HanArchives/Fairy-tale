@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
 
+    public float canCastAgainTimer;
+    public bool canCastAgainTimerRun;
 
     void Awake()
     {
@@ -23,13 +25,36 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    private void Update()
-    {
+    public void Update()
+    {/*
+
+        if(canCastAgainTimerRun == true)
+        {
+            canCastAgainTimer += Time.deltaTime;
+
+            if (canCastAgainTimer <= 2f)
+            {
+                GameManager.instance.canCast = false;
+            }
+
+            if (canCastAgainTimer >= 2f)
+            {
+                GameManager.instance.canCast = true;
+                canCastAgainTimerRun = false;
+                canCastAgainTimer = 0f;
+            }
+        }
+
+        if (canCastAgainTimerRun == false)
+        {
+            canCastAgainTimer = 0f;
+        }
+        */
     }
 
     public void AnimatorSearch() // Function to search for the "Talk" text pop-up animator, needs to run every time a scene starts
     {
-        animator3 = GameObject.Find("NPCCanvas").GetComponent<Animator>();
+        //animator3 = GameObject.Find("NPCCanvas").GetComponent<Animator>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -41,6 +66,8 @@ public class DialogueManager : MonoBehaviour
         SoundManager.PlaySound("buttonSound");
 
         GameManager.instance.isTalking = true;
+
+        GameManager.instance.canCast = false;
 
         nameText.text = dialogue.npcname;
 
@@ -69,6 +96,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
+        GameManager.instance.canCast = false;
+
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -87,5 +116,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsActive", false); // Closes the dialogue box
         //SoundManager.PlaySound("buttonSound");
         GameManager.instance.isTalking = false;
+        GameManager.instance.canCast = true;
+        animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
+        animator = animator.GetComponent<Animator>();
     }
 }
