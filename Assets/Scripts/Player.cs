@@ -58,6 +58,8 @@ public class Player: MonoBehaviour
 			isSpeedBoosting = true;
 
 			anim.SetTrigger("Boost");
+
+			SoundManager.PlaySound("pullSound2");
 			//spellBookAnim.SetTrigger("Fire");
 
 			//GameObject a = smokeObject;
@@ -79,7 +81,7 @@ public class Player: MonoBehaviour
 			} */
 		}
 
-		if(isSpeedBoosting == true)
+		if (isSpeedBoosting == true)
         {
 			speedBoostTimer += Time.deltaTime;
 			movementSpeed = boostSpeed;

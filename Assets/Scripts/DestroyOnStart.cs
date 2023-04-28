@@ -11,6 +11,7 @@ public class DestroyOnStart : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, destroyTime);
+        SoundManager.PlaySound("enemyDeathSound");
     }
 
     // Update is called once per frame

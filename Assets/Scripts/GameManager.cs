@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
             Destroy(cam.gameObject);
             Destroy(dialogueManager.gameObject);
             Destroy(HUD.gameObject);
+            Destroy(soundManager.gameObject);
 
             return;
         }
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     public Camera cam;
     public DialogueManager dialogueManager;
     public GameObject HUD;
+    public GameObject soundManager;
 
     // Scenes
     enum Scenes { SampleScene, InteriorTest, Battle1 };
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
     public bool isBattling;
     public bool isTalking;
     public float camTimer;
+    public float walkTimer;
 
     // Magic
     public ShootProjectile shootProjectile;
@@ -83,7 +86,22 @@ public class GameManager : MonoBehaviour
 
         pagesText.text = "Pages: " + pages;
 
-        if(playerHealth > playerMaxHealth)
+        if(isWalking == true)
+        {
+            walkTimer += Time.deltaTime;
+
+            if(walkTimer >= 0.4f)
+            {
+                walkTimer = 0;
+            }
+
+            if(walkTimer == 0)
+            {
+                SoundManager.PlaySound("playerWalkSound");
+            }
+        }
+
+        if (playerHealth > playerMaxHealth)
         {
             playerHealth = playerMaxHealth;
         }

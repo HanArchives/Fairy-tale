@@ -21,8 +21,12 @@ public class EnemyProjectile : MonoBehaviour
 
     public Vector3 targetPos;
 
+    public float startTime;
+
     protected void Start()
     {
+        startTime += Time.deltaTime;
+
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<Player>();
 
@@ -31,6 +35,17 @@ public class EnemyProjectile : MonoBehaviour
 
         targetPos = target.transform.position;
 
+        SoundManager.PlaySound("spellSound");
+
+    }
+
+    private void Update()
+    {
+        if(startTime >= destroyTime)
+        {
+            GameObject a = smokeObject;
+            Instantiate(a, transform.position, Quaternion.identity);
+        }
     }
 
     void FixedUpdate()

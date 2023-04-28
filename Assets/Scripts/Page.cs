@@ -44,6 +44,7 @@ public class Page : MonoBehaviour
         if(collision.tag == "Player")
         {
             GameManager.instance.AddPage();
+            SoundManager.PlaySound("playerHurtSound");
             //GameManager.instance.playerHealth = GameManager.instance.playerMaxHealth;
             dialogueTrigger.TriggerDialogue();
         }

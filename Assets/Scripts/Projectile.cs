@@ -22,6 +22,8 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        SoundManager.PlaySound("spellSound");
+
         if (isLongRange)
         {
             //rb.AddForce(new Vector3(GameManager.instance.player.horizontalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), GameManager.instance.player.verticalInput * (GameManager.instance.player.movementSpeed * projectileSpeed), 1f));

@@ -26,6 +26,7 @@ public class HealthPotion : MonoBehaviour
             if(GameManager.instance.playerHealth != GameManager.instance.playerMaxHealth)
             {
                 GameManager.instance.playerHealth += healAmount;
+                SoundManager.PlaySound("healSound");
                 Destroy(gameObject);
             }
 

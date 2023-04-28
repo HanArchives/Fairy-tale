@@ -31,6 +31,8 @@ public class Enemy : MonoBehaviour
 
     public Animator anim;
 
+    public bool isWalking;
+    public float walkTimer;
 
     void Start()
     {
@@ -69,11 +71,30 @@ public class Enemy : MonoBehaviour
         {
             rigid.transform.position = Vector3.MoveTowards(enemyposition, playerposition, step); // The enemy will move towards the player
             anim.SetBool("IsAttacking", true);
+
+            isWalking = true;
+
+            if (isWalking == true)
+            {
+                walkTimer += Time.deltaTime;
+
+                if (walkTimer >= 0.4f)
+                {
+                    walkTimer = 0;
+                }
+
+                if (walkTimer == 0)
+                {
+                    SoundManager.PlaySound("enemyWalkSound");
+                }
+            }
         }
         if (distance > followDistance) // If the player is out of range of the enemy
         {
             rigid.transform.position = Vector3.MoveTowards(enemyposition, playerposition, step2); // The enemy will stop moving
             anim.SetBool("IsAttacking", false);
+
+            isWalking = false;
         }
 
         //Makes the enemy always look at where the player is
