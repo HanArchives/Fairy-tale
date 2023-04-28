@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour
     public bool projectileEnemy;
     public float shootDistance; // Amount of distance needed for the enemy to shoot at the player
 
+    public Animator anim;
+
 
     void Start()
     {
@@ -37,6 +39,8 @@ public class Enemy : MonoBehaviour
 
         nextFire = Time.time;
         rb = projectile.GetComponent<Rigidbody2D>();
+
+        anim = GetComponent<Animator>();
     }
 
     public void Update()
@@ -64,10 +68,12 @@ public class Enemy : MonoBehaviour
         if (distance < followDistance) // If the player comes close enough to the enemy
         {
             rigid.transform.position = Vector3.MoveTowards(enemyposition, playerposition, step); // The enemy will move towards the player
+            anim.SetBool("IsAttacking", true);
         }
         if (distance > followDistance) // If the player is out of range of the enemy
         {
             rigid.transform.position = Vector3.MoveTowards(enemyposition, playerposition, step2); // The enemy will stop moving
+            anim.SetBool("IsAttacking", false);
         }
 
         //Makes the enemy always look at where the player is
@@ -105,6 +111,7 @@ public class Enemy : MonoBehaviour
             if (Time.time > nextFire)
             {
                 Instantiate(projectile, transform.position, Quaternion.identity); // Shoots a projectile
+                anim.SetTrigger("Attack");
                 nextFire = Time.time + fireRate; // Calculates when the next projectile should be fired
             }
         }

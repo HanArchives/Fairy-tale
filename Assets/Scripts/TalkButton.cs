@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TalkButton : MonoBehaviour
 {
     public Animator anim;
+    public Animator NPCanim;
     public Dialogue dialogueOption;
     public DialogueTrigger dialogueTrigger;
     public DialogueManager dialogueManager;
@@ -47,6 +48,8 @@ public class TalkButton : MonoBehaviour
 
             isPlayerTalking = true;
 
+            NPCanim.SetBool("IsTalking", true);
+
             
             //TalkTimer(); // Starts the timer
 
@@ -64,9 +67,10 @@ public class TalkButton : MonoBehaviour
             if (dialogueManager.sentences.Count == 0)
             {
                 dialogueManager.EndDialogue();
+                NPCanim.SetBool("IsTalking", false);
                 //talkTimer = 0;
 
-                if(isBattleEnemy)
+                if (isBattleEnemy)
                 {
                     Destroy(gameObject);
                     GameObject a = spawnEnemy;
@@ -106,6 +110,7 @@ public class TalkButton : MonoBehaviour
             isPlayerNear = false;
             isPlayerTalking = false;
             dialogueManager.EndDialogue();
+            NPCanim.SetBool("IsTalking", false);
         }
 
     }

@@ -23,6 +23,8 @@ public class EnemyHitbox : MonoBehaviour
 
     public GameObject destroyAnimation;
 
+    public Animator anim;
+
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth; // Makes sure the enemy is at full HP when spawning
@@ -47,7 +49,9 @@ public class EnemyHitbox : MonoBehaviour
         if (other.tag == "PlayerProjectile") // Checks if the weapon hits the enemy's hitbox
         {
             enemyCurrentHealth = (enemyCurrentHealth - GameManager.instance.spellDamage); // Calculates the amount of damage done
-            
+
+            anim.SetTrigger("Hit");
+
             knockBack.KnockbackEnemy();
             GameManager.instance.isBattling = true;
 
