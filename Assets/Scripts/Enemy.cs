@@ -21,15 +21,32 @@ public class Enemy : MonoBehaviour
 
     public GameObject enemyUI;
 
+
+    public GameObject projectile; // Projectile prefab
+    public Rigidbody2D rb; // Projectile Rigidbody2D
+    public float fireRate; // How much time passes before a projectile fires
+    public float nextFire; // Time variable to make the fireRate work
+    public bool projectileEnemy;
+    public float shootDistance; // Amount of distance needed for the enemy to shoot at the player
+
+
     void Start()
     {
         player = GameObject.Find("Player");
         rigid = GetComponent<Rigidbody2D>();
+
+        nextFire = Time.time;
+        rb = projectile.GetComponent<Rigidbody2D>();
     }
 
     public void Update()
     {
         enemyXposition = rigid.transform.position.x;
+
+        if (projectileEnemy) // Check if the enemy shoots projectiles
+        {
+            CheckIfTimeToFire();
+        }
     }
 
     void FixedUpdate()
@@ -78,6 +95,18 @@ public class Enemy : MonoBehaviour
             //FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection); // Function for the player to take damage
 
             GameManager.instance.playerHealth -= damageToGive;
+        }
+    }
+
+    void CheckIfTimeToFire()
+    {
+        if (distance < shootDistance) // Checks if the player is in range for the enemy to start shooting
+        {
+            if (Time.time > nextFire)
+            {
+                Instantiate(projectile, transform.position, Quaternion.identity); // Shoots a projectile
+                nextFire = Time.time + fireRate; // Calculates when the next projectile should be fired
+            }
         }
     }
 }

@@ -214,6 +214,12 @@ MonoBehaviour:
   followDistance: 10
   damageToGive: 1
   enemyUI: {fileID: 398316390615228583}
+  projectile: {fileID: 5297493942574709003, guid: adc685784f1c80c438d6f98344b3460f, type: 3}
+  rb: {fileID: 0}
+  fireRate: 4
+  nextFire: -4
+  projectileEnemy: 0
+  shootDistance: 10
 --- !u!50 &812367637038151599
 Rigidbody2D:
   serializedVersion: 4
