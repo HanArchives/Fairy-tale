@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e2fbb65a8a8e99445b2f3d94d028e9f5
+  - enabled: 1
+    path: Assets/Scenes/DryCleaner.unity
+    guid: 98be282571b66d049aca671a3ce696ea
+  - enabled: 1
+    path: Assets/Scenes/SchoolInterior.unity
+    guid: 159792b2521b49241a5c2cabe948da80
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: c153a04df9eeddf409994891acccc013
   m_configObjects: {}

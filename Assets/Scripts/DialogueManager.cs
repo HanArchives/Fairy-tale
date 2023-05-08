@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public bool canCastAgainTimerRun;
 
     public TalkButton talkButton;
+    public GameObject thisGameObject;
 
     void Awake()
     {
@@ -125,9 +126,9 @@ public class DialogueManager : MonoBehaviour
 
         if (talkButton.isBattleEnemy)
         {
-            Destroy(talkButton.gameObject);
+            Destroy(thisGameObject.gameObject);
             GameObject a = talkButton.spawnEnemy;
-            Instantiate(a, talkButton.transform.position, Quaternion.identity);
+            Instantiate(a, talkButton.spawnEnemy.transform.position, Quaternion.identity);
 
             animator.SetBool("IsActive", false); // Closes the dialogue box
                                                  //SoundManager.PlaySound("buttonSound");

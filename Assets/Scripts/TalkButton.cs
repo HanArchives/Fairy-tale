@@ -121,6 +121,7 @@ public class TalkButton : MonoBehaviour
             isPlayerNear = true;
 
             dialogueManager.talkButton = this.gameObject.GetComponent<TalkButton>();
+            dialogueManager.thisGameObject = gameObject.GetComponent<GameObject>();
         }
 
     }
@@ -133,7 +134,7 @@ public class TalkButton : MonoBehaviour
             anim.SetBool("IsActive", false);
             isPlayerNear = false;
             //isPlayerTalking = false;
-            dialogueManager.EndDialogue();
+            //dialogueManager.EndDialogue();
             NPCanim.SetBool("IsTalking", false);
             isPlayerTalking = false;
             //anim.SetBool("IsActive", true);
