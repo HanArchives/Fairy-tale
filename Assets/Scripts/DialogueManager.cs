@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     public float canCastAgainTimer;
     public bool canCastAgainTimerRun;
 
+    public TalkButton talkButton;
+
     void Awake()
     {
     }
@@ -59,7 +61,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-
         animator.SetBool("IsActive", true); // Opens the dialogue box
         animator3.SetBool("IsActive", false); // Disappears the "Talk" text pop-up
 
@@ -113,11 +114,37 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        /*
         animator.SetBool("IsActive", false); // Closes the dialogue box
         //SoundManager.PlaySound("buttonSound");
         GameManager.instance.isTalking = false;
         GameManager.instance.canCast = true;
         animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
         animator = animator.GetComponent<Animator>();
+        */
+
+        if (talkButton.isBattleEnemy)
+        {
+            Destroy(talkButton.gameObject);
+            GameObject a = talkButton.spawnEnemy;
+            Instantiate(a, talkButton.transform.position, Quaternion.identity);
+
+            animator.SetBool("IsActive", false); // Closes the dialogue box
+                                                 //SoundManager.PlaySound("buttonSound");
+            GameManager.instance.isTalking = false;
+            GameManager.instance.canCast = true;
+            animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
+            animator = animator.GetComponent<Animator>();
+        }
+
+        if (!talkButton.isBattleEnemy)
+        {
+            animator.SetBool("IsActive", false); // Closes the dialogue box
+                                                 //SoundManager.PlaySound("buttonSound");
+            GameManager.instance.isTalking = false;
+            GameManager.instance.canCast = true;
+            animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
+            animator = animator.GetComponent<Animator>();
+        }
     }
 }

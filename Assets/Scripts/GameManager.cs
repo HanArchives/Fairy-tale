@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     public GameObject soundManager;
 
     // Scenes
-    enum Scenes { SampleScene, InteriorTest, Battle1 };
+    enum Scenes { TitleScreen, SampleScene, InteriorTest, Battle1 };
     public string sceneName;
     public int previousScene = 0;
     public int index;
@@ -77,10 +77,15 @@ public class GameManager : MonoBehaviour
     public float playerMaxHealth;
     public Text healthText;
 
+    // Title Screen
+    public Animator HUDAnimator;
+
     void Start()
     {
         //spawnPoint = GameObject.Find("spawnPoint").transform.position;
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        //HUDAnimator = HUD.GetComponent<Animator>();
 
         regularCamSpeed = camSpeed;
     }
@@ -207,6 +212,15 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if(scene.buildIndex == (int)Scenes.TitleScreen)
+        {
+            HUDAnimator.SetBool("IsTitleScreen", true);
+        }
+
+        if (scene.buildIndex != (int)Scenes.TitleScreen)
+        {
+            HUDAnimator.SetBool("IsTitleScreen", false);
+        }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.Battle1)
         {

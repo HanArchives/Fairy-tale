@@ -61,6 +61,8 @@ public class TalkButton : MonoBehaviour
             isPlayerTalking = true;
 
             NPCanim.SetBool("IsTalking", true);
+
+            anim.SetBool("IsActive", false);
             //anim.SetBool("IsActive", false);
 
 
@@ -79,9 +81,11 @@ public class TalkButton : MonoBehaviour
 
             if (dialogueManager.sentences.Count == 0)
             {
+                anim.SetBool("IsActive", false);
+                isPlayerNear = false;
                 dialogueManager.EndDialogue();
                 NPCanim.SetBool("IsTalking", false);
-                //talkTimer = 0;
+                isPlayerTalking = false;
 
                 if (isBattleEnemy)
                 {
@@ -115,6 +119,8 @@ public class TalkButton : MonoBehaviour
             anim.SetBool("IsActive", true);
             dialogueTrigger.dialogue = dialogueOption;
             isPlayerNear = true;
+
+            dialogueManager.talkButton = this.gameObject.GetComponent<TalkButton>();
         }
 
     }
@@ -129,6 +135,7 @@ public class TalkButton : MonoBehaviour
             //isPlayerTalking = false;
             dialogueManager.EndDialogue();
             NPCanim.SetBool("IsTalking", false);
+            isPlayerTalking = false;
             //anim.SetBool("IsActive", true);
         }
 
