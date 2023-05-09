@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5383562637960230685}
   - component: {fileID: 3873905921296757498}
   m_Layer: 8
-  m_Name: HeadmasterSprite
+  m_Name: NPC Sprite
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9025378476549497747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -572,7 +572,7 @@ MonoBehaviour:
   isPlayerTalking: 0
   talkTimer: 0
   isBattleEnemy: 1
-  spawnEnemy: {fileID: 6967526092273384948, guid: 5c9b8595e2d2b0948975451bf68359e7, type: 3}
+  spawnEnemy: {fileID: 6967526092273384948, guid: 47f6282c9dbfc8845839685f1b3965b6, type: 3}
 --- !u!61 &6556487330340056443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ Animator:
   m_GameObject: {fileID: 9025378476549497747}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 10f5ef1939d97be4aa88db4eedc45bec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4b65790f33c7e734b933c57eb403adc7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

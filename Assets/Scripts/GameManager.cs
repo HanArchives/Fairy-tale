@@ -81,6 +81,8 @@ public class GameManager : MonoBehaviour
     public float playerHealth;
     public float playerMaxHealth;
     public Text healthText;
+    public Text healthWorldText;
+    public Text minosOneText;
 
     // Title Screen
     public Animator HUDAnimator;
@@ -98,6 +100,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
+
+        healthWorldText.text = playerHealth + " / " + playerMaxHealth;
 
         pagesText.text = "Pages: " + pages + " / " + "6";
 
@@ -220,12 +224,13 @@ public class GameManager : MonoBehaviour
         if(scene.buildIndex == (int)Scenes.TitleScreen)
         {
             HUDAnimator.SetBool("IsTitleScreen", true);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
-        
+
         if (scene.buildIndex == (int)Scenes.EndScreen && previousScene == (int)Scenes.SchoolInterior)
         {
-            HUDAnimator.SetBool("IsTitleScreen", true);
+            HUDAnimator.SetBool("IsEndScreen", true);
             player.transform.position = (spawnPoint.position);
         }
 
@@ -240,18 +245,21 @@ public class GameManager : MonoBehaviour
         {
             player.transform.position = (tutorialSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.Battle1)
         {
             player.transform.position = (towerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.DryCleaner)
         {
             player.transform.position = (dryCleanerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         // Checks which spawnpoint the player needs to move to, from which scene to which scene
@@ -266,24 +274,28 @@ public class GameManager : MonoBehaviour
         {
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         if (scene.buildIndex == (int)Scenes.Battle1)
         {
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         if (scene.buildIndex == (int)Scenes.DryCleaner)
         {
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SchoolInterior)
         {
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
         }
 
         previousScene = scene.buildIndex; // Keeps track of what the previousscene was

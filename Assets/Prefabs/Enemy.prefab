@@ -225,7 +225,7 @@ Transform:
   - {fileID: 5667715847815078968}
   - {fileID: 5807270062729609506}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7108732668134939959
 SpriteRenderer:
@@ -311,6 +311,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   isWalking: 0
   walkTimer: 0
+  combatStartTimer: 0
 --- !u!50 &812367637038151599
 Rigidbody2D:
   serializedVersion: 4
@@ -473,7 +474,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a0626a6bee1d1d74baf1945b4cbb9475, type: 3}
     m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0

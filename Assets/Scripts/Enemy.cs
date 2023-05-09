@@ -128,6 +128,7 @@ public class Enemy : MonoBehaviour
 
             SoundManager.PlaySound("playerHurtSound");
             GameManager.instance.player.anim.SetTrigger("Hurt");
+            GameManager.instance.player.playerHealthAnim.SetTrigger("IsHit");
         }
     }
 

@@ -45,7 +45,8 @@ public class Page : MonoBehaviour
         {
             GameManager.instance.AddPage();
             SoundManager.PlaySound("playerHurtSound");
-            GameManager.instance.player.anim.SetTrigger("Hurt");
+            GameManager.instance.player.anim.SetTrigger("Page");
+            GameManager.instance.player.playerHealthAnim.SetTrigger("Page");
 
             //GameManager.instance.playerHealth = GameManager.instance.playerMaxHealth;
             dialogueTrigger.TriggerDialogue();

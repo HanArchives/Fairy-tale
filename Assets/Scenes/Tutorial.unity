@@ -1298,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[0]
@@ -1306,17 +1306,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[1]
-      value: Try using one of your spells. Press Left Click for Short Range Attack.
+      value: Try using one of your spells. Press Left Click for a Short Range Attack.
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[2]
-      value: You can aim your magic with the mouse. Cast a slow spell with the left
-        button and a quick one with the right.
+      value: Try defeating that dummy enemy to my north.
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[3]
-      value: You can aim your magic with the mouse. Cast a slow spell with the left
-        button and a quick one with the right.
+      value: Don't worry about it, they're not real people.
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[4]
@@ -11901,7 +11899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[0]
@@ -11911,12 +11909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[1]
-      value: Press Right Click for Long Range Attack.
+      value: Press Right Click for a Long Range Attack.
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[2]
-      value: You can aim your magic with the mouse. Cast a slow spell with the left
-        button and a quick one with the right.
+      value: Defeat that dummy enemy at the Marketplace with it!
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[3]
@@ -100690,6 +100687,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7677046090905000584, guid: 89169a9054ac4dd4d927da7a9e4362f3, type: 3}
   m_PrefabInstance: {fileID: 1554871970}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1557841949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2882619779043101465, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_RootOrder
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -42.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501050479501575893, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: followDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyCurrentHealth
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
 --- !u!1001 &1559864530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101545,7 +101615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[2]
-      value: They won't work if your health is full though, ey.
+      value: They won't work if your health is full though.
       objectReference: {fileID: 0}
     - target: {fileID: 9035186783616801394, guid: 853d401e097ba7f40b12676b047a21fa, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[3]
@@ -102987,6 +103057,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7205256287385394771, guid: 46a30585c24a779499403c5cfd444210, type: 3}
   m_PrefabInstance: {fileID: 1665242732}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1667374148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2882619779043101465, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_Name
+      value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_RootOrder
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588268331139862525, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyCurrentHealth
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
 --- !u!1001 &1668540294
 PrefabInstance:
   m_ObjectHideFlags: 0

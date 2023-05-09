@@ -39,6 +39,8 @@ public class Player: MonoBehaviour
 	public GameObject smokeObject;
 	public Animator spellBookAnim;
 
+	public Animator playerHealthAnim;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -130,6 +132,8 @@ public class Player: MonoBehaviour
 		if (horizontalInput > 0)    //If player is moving towards right but is facing left,
 		{       // or if player is moving towards left but is facing right,
 			transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
+			GameManager.instance.healthWorldText.transform.localRotation = Quaternion.Euler(0, 0, 0);
+			GameManager.instance.minosOneText.transform.localRotation = Quaternion.Euler(0, 0, 0);
 			anim.SetBool("IsRunning", true);
 
 			bodyRenderer.sprite = bodySprites[2];
@@ -141,6 +145,8 @@ public class Player: MonoBehaviour
 		if (horizontalInput < 0)
 		{
 			transform.localRotation = Quaternion.Euler(0, 180, 0); // Swaps sprite direction
+			GameManager.instance.healthWorldText.transform.localRotation = Quaternion.Euler(0, 180, 0);
+			GameManager.instance.minosOneText.transform.localRotation = Quaternion.Euler(0, 180, 0);
 			anim.SetBool("IsRunning", true);
 			bodyRenderer.sprite = bodySprites[2];
 			bodyRenderer.size = new Vector2(2.15f, 2.15f);
