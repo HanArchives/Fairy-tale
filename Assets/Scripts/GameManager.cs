@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
     {
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
 
-        pagesText.text = "Pages: " + pages;
+        pagesText.text = "Pages: " + pages + " / " + "6";
 
         if(isWalking == true)
         {
