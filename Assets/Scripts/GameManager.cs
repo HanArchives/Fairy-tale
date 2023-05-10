@@ -225,6 +225,7 @@ public class GameManager : MonoBehaviour
         {
             HUDAnimator.SetBool("IsTitleScreen", true);
             HUDAnimator.SetBool("IsEndScreen", false);
+            player.transform.position = (tutorialSpawnPoint.position);
         }
 
 

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94eb447307a6051418db700efd97d97e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 067d76407c7711a43b76bdd55f10fa00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7406b74dfed5b0c4786bde27efc5a243, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dccdfe77c609ba04288786305daa6241, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 72af24cbe6c66e74b8815522e5630418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaee08b8ddd8e1c4ba0b5984e10d8061, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e44de1d7509a3fe498c5025455dd12b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c73d0f032f5c0ed45b9168a307c1060a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b021ed1c339ac874f863e9b4f8da105e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62a17f069ab6aa448a3eda35f0d5e1a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 2540378425774626584}
   - component: {fileID: 4991965880059308210}
   m_Layer: 8
-  m_Name: NPC Bumi
+  m_Name: NPC Han
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,16 +735,16 @@ MonoBehaviour:
   anim: {fileID: 495240295601235243}
   NPCanim: {fileID: 1105588894656684567}
   dialogueOption:
-    npcname: Bumi
+    npcname: Han
     sentences:
-    - I've got nothing interesting to say.
+    - Fight me, bitch!
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0
   isPlayerTalking: 0
   talkTimer: 0
   isBattleEnemy: 1
-  spawnEnemy: {fileID: 9025378476549497747, guid: 18ed50b398d1d0c40b8e911f737135d3, type: 3}
+  spawnEnemy: {fileID: 9025378476549497747, guid: e593ed61f5d9e5d49968e15542ef50c9, type: 3}
 --- !u!61 &6556487330340056443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -835,10 +835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed07a3a7f2201e7479840390f71b797f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSprite: {fileID: 21300000, guid: affe0bc9bbe5b874fb223a9396f4e1ca, type: 3}
-  downSprite: {fileID: 21300000, guid: b021ed1c339ac874f863e9b4f8da105e, type: 3}
-  leftSprite: {fileID: 21300000, guid: 6a35e63427b9cff479220faa607325d5, type: 3}
-  rightSprite: {fileID: 21300000, guid: 762d42c62eb099c43a6d68fd417229c8, type: 3}
+  upSprite: {fileID: 21300000, guid: c24d77b00f5f3944997fc19921dbd37e, type: 3}
+  downSprite: {fileID: 21300000, guid: 62a17f069ab6aa448a3eda35f0d5e1a8, type: 3}
+  leftSprite: {fileID: 21300000, guid: e71c79b713aa06f42bb0b7f5cff3cc4f, type: 3}
+  rightSprite: {fileID: 21300000, guid: ab801c90f29741942b9510002e3fca60, type: 3}
   spriteRenderer: {fileID: 3873905921296757498}
   playerposition: {x: 0, y: 0, z: 0}
   enemyposition: {x: 0, y: 0, z: 0}

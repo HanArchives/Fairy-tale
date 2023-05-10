@@ -563,7 +563,7 @@ MonoBehaviour:
   anim: {fileID: 495240295601235243}
   NPCanim: {fileID: 1105588894656684567}
   dialogueOption:
-    npcname: Miss Who?
+    npcname: Headmaster
     sentences:
     - I've got nothing interesting to say.
   dialogueTrigger: {fileID: 0}

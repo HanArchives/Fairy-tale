@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAnim: {fileID: 7463820423841937999, guid: 807c93b03ba907045984a245f71d289c, type: 3}
-  spellBookAnim: {fileID: 0}
+  spellBookAnim: {fileID: 1861226163}
   closeRangeProjectile: {fileID: 4736475520597067236, guid: e7e4841a3f47b9048ac6590b9c25c06f, type: 3}
   longRangeProjectile: {fileID: 4736475520597067236, guid: 6443cd9b1e60a124f9927387af32ccb7, type: 3}
   groundLay: {fileID: 7973213444868877163, guid: 6eec7af2788ad0949b7d390a52401843, type: 3}
@@ -3106,7 +3106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f84b65464d42247a746e82706f021c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 421228189}
   cam: {fileID: 1526337420}
   dialogueManager: {fileID: 1630873326}
   HUD: {fileID: 2033736081}
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   isTalking: 0
   camTimer: 0
   walkTimer: 0
-  shootProjectile: {fileID: 0}
+  shootProjectile: {fileID: 421228186}
   canCast: 1
   spellDamage: 1
   playerHealth: 9

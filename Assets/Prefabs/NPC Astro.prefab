@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94eb447307a6051418db700efd97d97e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3872b3b3eb1dcf740a97817ebb36fed8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7406b74dfed5b0c4786bde27efc5a243, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c5f6a35d4cb1d44faccb0e6d5cce224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 72af24cbe6c66e74b8815522e5630418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2d29e627806c6f4b8ef7dae11d8c302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e44de1d7509a3fe498c5025455dd12b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ab93f10042e865428bae299c87a2876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b021ed1c339ac874f863e9b4f8da105e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71a1ff907c4e54b45a4ae9c44019991d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 2540378425774626584}
   - component: {fileID: 4991965880059308210}
   m_Layer: 8
-  m_Name: NPC Bumi
+  m_Name: NPC Astro
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
   anim: {fileID: 495240295601235243}
   NPCanim: {fileID: 1105588894656684567}
   dialogueOption:
-    npcname: Bumi
+    npcname: Astro
     sentences:
     - I've got nothing interesting to say.
   dialogueTrigger: {fileID: 0}
@@ -744,7 +744,7 @@ MonoBehaviour:
   isPlayerTalking: 0
   talkTimer: 0
   isBattleEnemy: 1
-  spawnEnemy: {fileID: 9025378476549497747, guid: 18ed50b398d1d0c40b8e911f737135d3, type: 3}
+  spawnEnemy: {fileID: 9025378476549497747, guid: 334d00846ed51a74bb1b79ff6242e9c0, type: 3}
 --- !u!61 &6556487330340056443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -835,10 +835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed07a3a7f2201e7479840390f71b797f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSprite: {fileID: 21300000, guid: affe0bc9bbe5b874fb223a9396f4e1ca, type: 3}
-  downSprite: {fileID: 21300000, guid: b021ed1c339ac874f863e9b4f8da105e, type: 3}
-  leftSprite: {fileID: 21300000, guid: 6a35e63427b9cff479220faa607325d5, type: 3}
-  rightSprite: {fileID: 21300000, guid: 762d42c62eb099c43a6d68fd417229c8, type: 3}
+  upSprite: {fileID: 21300000, guid: 91111cc71be3089459f576da480be033, type: 3}
+  downSprite: {fileID: 21300000, guid: 71a1ff907c4e54b45a4ae9c44019991d, type: 3}
+  leftSprite: {fileID: 21300000, guid: 252ffc0e0d08d4a43b71eaea6d6a8402, type: 3}
+  rightSprite: {fileID: 21300000, guid: 773578e548e3fb64b860eb2d17db0ad0, type: 3}
   spriteRenderer: {fileID: 3873905921296757498}
   playerposition: {x: 0, y: 0, z: 0}
   enemyposition: {x: 0, y: 0, z: 0}
