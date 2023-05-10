@@ -127,8 +127,8 @@ public class DialogueManager : MonoBehaviour
         if (talkButton.isBattleEnemy)
         {
             Destroy(thisGameObject.gameObject);
-            GameObject a = talkButton.spawnEnemy;
-            Instantiate(a, talkButton.spawnEnemy.transform.position, Quaternion.identity);
+            //GameObject a = talkButton.spawnEnemy;
+            //Instantiate(a, talkButton.spawnEnemy.transform.position, Quaternion.identity);
 
             animator.SetBool("IsActive", false); // Closes the dialogue box
                                                  //SoundManager.PlaySound("buttonSound");

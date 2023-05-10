@@ -103,14 +103,14 @@ public class Enemy : MonoBehaviour
         //Makes the enemy always look at where the player is
         if (player.transform.position.x > enemyXposition)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
+            //transform.localRotation = Quaternion.Euler(0, 0, 0); // Resets sprite direction
             enemyUI.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (player.transform.position.x < enemyXposition)
         {
-            transform.localRotation = Quaternion.Euler(0, 180, 0); // Resets sprite direction
-            enemyUI.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            //transform.localRotation = Quaternion.Euler(0, 180, 0); // Resets sprite direction
+            enemyUI.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
