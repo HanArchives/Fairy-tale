@@ -90,8 +90,9 @@ public class TalkButton : MonoBehaviour
                 NPCanim.SetBool("IsTalking", false);
                 isPlayerTalking = false;
 
-                if (isBattleEnemy)
-                {
+                
+                //if (isBattleEnemy)
+                //{
                     /*
                     Destroy(gameObject);
                     GameObject a = spawnEnemy;
@@ -99,16 +100,17 @@ public class TalkButton : MonoBehaviour
                     */
 
                     //SpawnEnemy();
-                }
+                //}
 
-                if (!isBattleEnemy)
-                {
+                //if (!isBattleEnemy)
+                //{
                     /*
                     dialogueManager.EndDialogue();
                     */
 
                     //SpawnEnemy();
-                }
+                //}
+                
             }
 
             else
@@ -169,7 +171,8 @@ public class TalkButton : MonoBehaviour
 
         if (!isBattleEnemy)
         {
-            dialogueManager.EndDialogue();
+            //dialogueManager.EndDialogue();
+            Debug.Log("EndDialogue");
         }
     }
 
