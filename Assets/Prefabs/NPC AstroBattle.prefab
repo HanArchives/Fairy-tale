@@ -982,3 +982,4 @@ MonoBehaviour:
   enemyYposition: 0
   enemyXposition: 0
   rigid: {fileID: 2207897008655463775}
+  isBattleNPC: 1

@@ -19,6 +19,9 @@ public class TalkButton : MonoBehaviour
     public bool isBattleEnemy;
     public GameObject spawnEnemy;
 
+    public GameObject thisNPC;
+    public Transform thisNPCpos;
+
     void Start()
     {
         //anim = GameObject.Find("NPCCanvas").GetComponent<Animator>();
@@ -89,14 +92,22 @@ public class TalkButton : MonoBehaviour
 
                 if (isBattleEnemy)
                 {
+                    /*
                     Destroy(gameObject);
                     GameObject a = spawnEnemy;
                     Instantiate(a, transform.position, Quaternion.identity);
+                    */
+
+                    //SpawnEnemy();
                 }
 
                 if (!isBattleEnemy)
                 {
+                    /*
                     dialogueManager.EndDialogue();
+                    */
+
+                    //SpawnEnemy();
                 }
             }
 
@@ -145,6 +156,21 @@ public class TalkButton : MonoBehaviour
     public void TalkTimer() // Timer starts when the player starts talking to the NPC
     {
         talkTimer += Time.deltaTime;
+    }
+
+    public void SpawnEnemy()
+    {
+        if (isBattleEnemy)
+        {
+            Destroy(thisNPC);
+            GameObject a = spawnEnemy;
+            Instantiate(a, transform.position, Quaternion.identity);
+        }
+
+        if (!isBattleEnemy)
+        {
+            dialogueManager.EndDialogue();
+        }
     }
 
 }

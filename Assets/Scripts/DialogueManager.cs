@@ -136,6 +136,8 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.canCast = true;
             animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
             animator = animator.GetComponent<Animator>();
+
+            talkButton.SpawnEnemy();
         }
 
         if (!talkButton.isBattleEnemy)
@@ -146,6 +148,8 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.canCast = true;
             animator3.SetBool("IsActive", true); // Disappears the "Talk" text pop-up
             animator = animator.GetComponent<Animator>();
+
+            talkButton.SpawnEnemy();
         }
     }
 }

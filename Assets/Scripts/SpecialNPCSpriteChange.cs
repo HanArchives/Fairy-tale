@@ -20,6 +20,8 @@ public class SpecialNPCSpriteChange : MonoBehaviour
 
     public Rigidbody2D rigid;
 
+    public bool isBattleNPC;
+
     private void Start()
     {
         //spriteRenderer = GetComponent<SpriteRenderer>();
@@ -71,25 +73,62 @@ public class SpecialNPCSpriteChange : MonoBehaviour
             spriteRenderer.sprite = rightSprite;
         } */
 
-        if (direction.y < 0)
+        /////////////////////DE GOEIE
+        
+        if(!isBattleNPC)
         {
-            spriteRenderer.sprite = downSprite;
+
+            if (direction.y < 0)
+            {
+                spriteRenderer.sprite = downSprite;
+            }
+
+            if (direction.y > 0)
+            {
+                spriteRenderer.sprite = upSprite;
+            }
+
+            else if (direction.x < 0)
+            {
+                spriteRenderer.sprite = leftSprite;
+            }
+
+            else if (direction.x > 0)
+            {
+                spriteRenderer.sprite = rightSprite;
+            }
+
         }
 
-        if (direction.y > 0)
+
+
+        //////////////////////DE NIEUWE
+        
+        if(isBattleNPC)
         {
-            spriteRenderer.sprite = upSprite;
+
+            if (playerposition.y < enemyYposition)
+            {
+                spriteRenderer.sprite = downSprite;
+            }
+
+            if (playerposition.y > enemyYposition)
+            {
+                spriteRenderer.sprite = upSprite;
+            }
+
+            else if (playerposition.x < enemyXposition)
+            {
+                spriteRenderer.sprite = leftSprite;
+            }
+
+            else if (playerposition.x > enemyXposition)
+            {
+                spriteRenderer.sprite = rightSprite;
+            }
+
         }
 
-        else if (direction.x < 0)
-        {
-            spriteRenderer.sprite = leftSprite;
-        }
-
-        else if (direction.x > 0)
-        {
-            spriteRenderer.sprite = rightSprite;
-        }
 
         lastPosition = currentPosition;
     }

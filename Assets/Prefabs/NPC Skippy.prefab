@@ -745,6 +745,8 @@ MonoBehaviour:
   talkTimer: 0
   isBattleEnemy: 1
   spawnEnemy: {fileID: 9025378476549497747, guid: 1edc232cf9293aa4f89a3414284a6694, type: 3}
+  thisNPC: {fileID: 9025378476549497747}
+  thisNPCpos: {fileID: 0}
 --- !u!61 &6556487330340056443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -845,6 +847,7 @@ MonoBehaviour:
   enemyYposition: 0
   enemyXposition: 0
   rigid: {fileID: 4991965880059308210}
+  isBattleNPC: 0
 --- !u!50 &4991965880059308210
 Rigidbody2D:
   serializedVersion: 4
