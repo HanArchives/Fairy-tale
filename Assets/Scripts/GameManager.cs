@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public GameObject soundManager;
 
     // Scenes
-    enum Scenes { TitleScreen, SampleScene, InteriorTest, Battle1, Tutorial, DryCleaner, SchoolInterior, EndScreen, Inn };
+    enum Scenes { TitleScreen, SampleScene, InteriorTest, Battle1, Tutorial, DryCleaner, SchoolInterior, EndScreen, Inn, SampleScene0, FinalBoss };
     public string sceneName;
     public int previousScene = 0;
     public int index;
@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviour
     public Transform tutorialSpawnPoint;
     public Transform dryCleanerSpawnPoint;
     public Transform innSpawnPoint;
+    public Transform insideInnSpawnPoint;
+    public Transform schoolExitSpawnPoint;
 
     // Items
     public int pages;
@@ -264,7 +266,29 @@ public class GameManager : MonoBehaviour
             HUDAnimator.SetBool("IsEndScreen", false);
         }
 
-        if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.DryCleaner)
+        if (scene.buildIndex == (int)Scenes.SampleScene0 && previousScene == (int)Scenes.DryCleaner)
+        {
+            player.transform.position = (dryCleanerSpawnPoint.position);
+            HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
+        }
+
+        if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.SchoolInterior)
+        {
+            player.transform.position = (dryCleanerSpawnPoint.position);
+            HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
+        }
+
+        if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.SchoolInterior)
+        {
+            player.transform.position = (schoolExitSpawnPoint.position);
+            HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
+        }
+
+
+        if (scene.buildIndex == (int)Scenes.SampleScene0 && previousScene == (int)Scenes.DryCleaner)
         {
             player.transform.position = (dryCleanerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
@@ -307,9 +331,16 @@ public class GameManager : MonoBehaviour
             HUDAnimator.SetBool("IsEndScreen", false);
         }
 
-        if (scene.buildIndex == (int)Scenes.Inn)
+        if (scene.buildIndex == (int)Scenes.FinalBoss)
         {
             player.transform.position = (spawnPoint.position);
+            HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
+        }
+
+        if (scene.buildIndex == (int)Scenes.Inn && previousScene == (int)Scenes.TitleScreen)
+        {
+            player.transform.position = (insideInnSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
         }
