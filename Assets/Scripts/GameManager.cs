@@ -243,7 +243,7 @@ public class GameManager : MonoBehaviour
         }
         */
 
-        if (scene.buildIndex == (int)Scenes.Tutorial)
+        if (scene.buildIndex == (int)Scenes.Tutorial && previousScene == (int)Scenes.TitleScreen)
         {
             player.transform.position = (tutorialSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
