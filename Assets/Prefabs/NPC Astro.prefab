@@ -737,7 +737,8 @@ MonoBehaviour:
   dialogueOption:
     npcname: Astro
     sentences:
-    - I've got nothing interesting to say.
+    - "So you\u2019re the notorious wizard that our headmaster warned us about, I
+      will stop you!"
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

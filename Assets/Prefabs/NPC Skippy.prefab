@@ -737,7 +737,8 @@ MonoBehaviour:
   dialogueOption:
     npcname: Skippy
     sentences:
-    - I've got nothing interesting to say.
+    - "I can\u2019t believe I let myself be deceived by you after my headmaster warned
+      us! Come at me you filth."
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

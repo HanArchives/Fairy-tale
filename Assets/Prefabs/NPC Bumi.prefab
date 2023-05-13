@@ -737,7 +737,7 @@ MonoBehaviour:
   dialogueOption:
     npcname: Bumi
     sentences:
-    - I've got nothing interesting to say.
+    - How dare you act like one of our students, you fooled us! I will make you pay!
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

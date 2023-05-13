@@ -389,6 +389,13 @@ MonoBehaviour:
   dropPage: {fileID: 4695412763098798944, guid: bba8caa7235d55f49b7d4c9e079c78ee, type: 3}
   destroyAnimation: {fileID: 7463820423841937999, guid: bff6376a101e84e40ab7908959c12f64, type: 3}
   anim: {fileID: 1105588894656684567}
+  isHeadMaster: 0
+  isAstro: 0
+  isLuna: 0
+  isHan: 0
+  isSkippy: 0
+  isBumi: 1
+  isRhea: 0
 --- !u!114 &4649698289532937013
 MonoBehaviour:
   m_ObjectHideFlags: 0

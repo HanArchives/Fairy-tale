@@ -737,7 +737,7 @@ MonoBehaviour:
   dialogueOption:
     npcname: Luna
     sentences:
-    - I've got nothing interesting to say.
+    - It's you! I am not giving up without a fight! Come at me!
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

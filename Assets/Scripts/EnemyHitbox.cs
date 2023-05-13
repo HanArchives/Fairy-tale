@@ -25,6 +25,16 @@ public class EnemyHitbox : MonoBehaviour
 
     public Animator anim;
 
+    public bool isHeadMaster;
+
+    public bool isAstro;
+    public bool isLuna;
+    public bool isHan;
+    public bool isSkippy;
+    public bool isBumi;
+
+    public bool isRhea;
+
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth; // Makes sure the enemy is at full HP when spawning
@@ -71,6 +81,42 @@ public class EnemyHitbox : MonoBehaviour
             GameManager.instance.isBattling = false;
             GameObject b = destroyAnimation;
             Instantiate(b, transform.position, Quaternion.identity);
+
+            if(isAstro)
+            {
+                GameManager.instance.astroDefeated = true;
+            }
+
+            if (isLuna)
+            {
+                GameManager.instance.lunaDefeated = true;
+            }
+
+            if (isHan)
+            {
+                GameManager.instance.hanDefeated = true;
+            }
+
+            if (isSkippy)
+            {
+                GameManager.instance.skippyDefeated = true;
+            }
+
+            if (isBumi)
+            {
+                GameManager.instance.bumiDefeated = true;
+            }
+
+            if (isRhea)
+            {
+                GameManager.instance.rheaDefeated = true;
+            }
+
+            if (isHeadMaster)
+            {
+                GameManager.instance.LoadCutscene5();
+                Debug.Log("Killed the headmaster");
+            }
 
             if (isWizardEnemy)
             {

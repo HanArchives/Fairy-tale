@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.86
+      value: 3.4299996
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8027,7 +8027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.86
+      value: 3.43
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9073,19 +9073,31 @@ PrefabInstance:
       objectReference: {fileID: 6967526092273384948, guid: 118c58b2466201b4f93ec4c97827429b, type: 3}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: isBattleEnemy
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.npcname
-      value: Bumi
+      value: Innkeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
+      propertyPath: dialogueOption.sentences.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[0]
-      value: Hey! What?!
+      value: Hello there.
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[1]
-      value: You're here to battle me? Give it a try!
+      value: While you were sleeping the Headmaster went into your room.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
+      propertyPath: dialogueOption.sentences.Array.data[2]
+      value: Hope that's okay. He's kind of the boss around here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
+      propertyPath: dialogueOption.sentences.Array.data[3]
+      value: So I can't say no to him. You might catch him outside still.
       objectReference: {fileID: 0}
     - target: {fileID: 4370539901595691388, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: m_Name
@@ -9306,7 +9318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466314113869100935, guid: 1b1f1a74722b8b74c9dabe878ca292c0, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: Tutorial
+      value: SampleScene1
       objectReference: {fileID: 0}
     - target: {fileID: 7673192989843990300, guid: 1b1f1a74722b8b74c9dabe878ca292c0, type: 3}
       propertyPath: m_RootOrder
@@ -9716,6 +9728,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1478929039}
     m_Modifications:
+    - target: {fileID: 157476584714817080, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6685505
+      objectReference: {fileID: 0}
+    - target: {fileID: 157476584714817080, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.49702263
+      objectReference: {fileID: 0}
     - target: {fileID: 963027211303871849, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
       propertyPath: m_Name
       value: Wall inn (11)
@@ -12670,7 +12690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.129081
+      value: -6.59
       objectReference: {fileID: 0}
     - target: {fileID: 478340291704049868, guid: a9b6282a6750d47cb960e14e23787dc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13533,7 +13553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1554673158
 Transform:
   m_ObjectHideFlags: 0
@@ -13554,6 +13574,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568601408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568601410}
+  - component: {fileID: 1568601409}
+  - component: {fileID: 1568601411}
+  - component: {fileID: 1568601412}
+  m_Layer: 0
+  m_Name: ChazzDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1568601409
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568601408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3068676, y: -0.841712}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.562458, y: 2.683424}
+  m_EdgeRadius: 0
+--- !u!4 &1568601410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568601408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.36, y: 28.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568601411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568601408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d21c57815c2a1f4e9edcec1275e97da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  dialogue:
+    npcname: Chazz
+    sentences:
+    - "Where am I\u2026 Yes, the inn."
+    - Why am I feeling weaker?
+    - "Doesn\u2019t matter. One more wizard to defeat."
+    - "My grimoire\u2026 WHAT?! My pages are gone!"
+    - Saints! I NEED MY SPELLS BACK!
+--- !u!114 &1568601412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568601408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb5ac8d71a3124c8515f398fd8fcc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTrigger: {fileID: 1568601411}
+  dialogueManager: {fileID: 0}
 --- !u!1001 &1605606076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14657,6 +14791,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1478929039}
     m_Modifications:
+    - target: {fileID: 157476584714817080, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6685505
+      objectReference: {fileID: 0}
+    - target: {fileID: 157476584714817080, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.4970231
+      objectReference: {fileID: 0}
     - target: {fileID: 963027211303871849, guid: c2cde42357ff242ea851da9bc5013731, type: 3}
       propertyPath: m_Name
       value: Wall inn (12)

@@ -737,7 +737,8 @@ MonoBehaviour:
   dialogueOption:
     npcname: Rhea
     sentences:
-    - I've got nothing interesting to say.
+    - You tricked us!  This duel will decide our fate. I will prove that I am stronger
+      and more resilient than you think.
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

@@ -737,7 +737,8 @@ MonoBehaviour:
   dialogueOption:
     npcname: Han
     sentences:
-    - Fight me, bitch!
+    - I won't let you get away with what you did to us! I will show you how it's
+      done!
   dialogueTrigger: {fileID: 0}
   dialogueManager: {fileID: 0}
   isPlayerNear: 0

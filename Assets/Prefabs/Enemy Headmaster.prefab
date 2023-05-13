@@ -153,6 +153,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: isHeadMaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
       propertyPath: isWizardEnemy
       value: 1
       objectReference: {fileID: 0}
