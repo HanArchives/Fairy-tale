@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public GameObject soundManager;
 
     // Scenes
-    enum Scenes { TitleScreen, SampleScene, InteriorTest, Battle1, Tutorial, DryCleaner, SchoolInterior, EndScreen, Inn, SampleScene0, FinalBoss };
+    enum Scenes { TitleScreen, SampleScene, InteriorTest, Battle1, Tutorial, DryCleaner, SchoolInterior, EndScreen, Inn, SampleScene0, FinalBoss, Cutscene1, Cutscene2 };
     public string sceneName;
     public int previousScene = 0;
     public int index;
@@ -228,6 +228,7 @@ public class GameManager : MonoBehaviour
         {
             HUDAnimator.SetBool("IsTitleScreen", true);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
             player.transform.position = (tutorialSpawnPoint.position);
         }
 
@@ -235,6 +236,7 @@ public class GameManager : MonoBehaviour
         if (scene.buildIndex == (int)Scenes.EndScreen && previousScene == (int)Scenes.SchoolInterior)
         {
             HUDAnimator.SetBool("IsEndScreen", true);
+            HUDAnimator.SetBool("IsInCutscene", false);
             player.transform.position = (spawnPoint.position);
         }
 
@@ -250,6 +252,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (tutorialSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.Tutorial && previousScene == (int)Scenes.Inn)
@@ -257,6 +260,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (innSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.Battle1)
@@ -264,6 +268,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (towerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene0 && previousScene == (int)Scenes.DryCleaner)
@@ -271,6 +276,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (dryCleanerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.SchoolInterior)
@@ -278,6 +284,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (dryCleanerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SampleScene && previousScene == (int)Scenes.SchoolInterior)
@@ -285,6 +292,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (schoolExitSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
 
@@ -293,6 +301,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (dryCleanerSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         // Checks which spawnpoint the player needs to move to, from which scene to which scene
@@ -308,6 +317,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.Battle1)
@@ -315,6 +325,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.DryCleaner)
@@ -322,6 +333,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.SchoolInterior)
@@ -329,6 +341,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.FinalBoss)
@@ -336,6 +349,7 @@ public class GameManager : MonoBehaviour
             player.transform.position = (spawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
         }
 
         if (scene.buildIndex == (int)Scenes.Inn && previousScene == (int)Scenes.TitleScreen)
@@ -343,6 +357,15 @@ public class GameManager : MonoBehaviour
             player.transform.position = (insideInnSpawnPoint.position);
             HUDAnimator.SetBool("IsTitleScreen", false);
             HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", false);
+        }
+
+        if (scene.buildIndex == (int)Scenes.Cutscene1)
+        {
+            player.transform.position = (spawnPoint.position);
+            HUDAnimator.SetBool("IsTitleScreen", false);
+            HUDAnimator.SetBool("IsEndScreen", false);
+            HUDAnimator.SetBool("IsInCutscene", true);
         }
 
         previousScene = scene.buildIndex; // Keeps track of what the previousscene was
