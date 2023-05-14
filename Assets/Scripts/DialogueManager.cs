@@ -126,6 +126,11 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("IsActive", false); // Closes the dialogue box
 
+        if(talkButton.isDrycleaner)
+        {
+            GameManager.instance.player.schoolOutfit = true;
+        }
+
 
         if (talkButton.isBattleEnemy)
         {

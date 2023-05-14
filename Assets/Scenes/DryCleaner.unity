@@ -4287,6 +4287,10 @@ PrefabInstance:
       value: -0.46471035
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
+      propertyPath: isDrycleaner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.npcname
       value: Dry Cleaner
       objectReference: {fileID: 0}

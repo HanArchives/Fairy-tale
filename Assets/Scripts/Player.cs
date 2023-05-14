@@ -33,6 +33,8 @@ public class Player: MonoBehaviour
 	public Sprite[] bodySprites;
 	public SpriteRenderer bodyRenderer;
 
+	public Sprite[] purpleBodySprites;
+
 	public SpriteRenderer glassesRenderer;
 	public SpriteRenderer hairRenderer;
 
@@ -40,6 +42,8 @@ public class Player: MonoBehaviour
 	public Animator spellBookAnim;
 
 	public Animator playerHealthAnim;
+
+	public bool schoolOutfit;
 
 	void Start()
 	{
@@ -136,8 +140,18 @@ public class Player: MonoBehaviour
 			GameManager.instance.minosOneText.transform.localRotation = Quaternion.Euler(0, 0, 0);
 			anim.SetBool("IsRunning", true);
 
-			bodyRenderer.sprite = bodySprites[2];
-			bodyRenderer.size = new Vector2(2.15f, 2.15f);
+            if (schoolOutfit)
+            {
+				bodyRenderer.sprite = bodySprites[2];
+				bodyRenderer.size = new Vector2(2.15f, 2.15f);
+            }
+
+			if(!schoolOutfit)
+            {
+				bodyRenderer.sprite = purpleBodySprites[2];
+				bodyRenderer.size = new Vector2(2.25f, 2.25f);
+			}
+
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);
@@ -148,8 +162,19 @@ public class Player: MonoBehaviour
 			GameManager.instance.healthWorldText.transform.localRotation = Quaternion.Euler(0, 180, 0);
 			GameManager.instance.minosOneText.transform.localRotation = Quaternion.Euler(0, 180, 0);
 			anim.SetBool("IsRunning", true);
-			bodyRenderer.sprite = bodySprites[2];
-			bodyRenderer.size = new Vector2(2.15f, 2.15f);
+
+			if(schoolOutfit)
+            {
+				bodyRenderer.sprite = bodySprites[2];
+				bodyRenderer.size = new Vector2(2.15f, 2.15f);
+            }
+
+			if(!schoolOutfit)
+            {
+				bodyRenderer.sprite = purpleBodySprites[2];
+				bodyRenderer.size = new Vector2(2.25f, 2.25f);
+			}
+
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);
@@ -158,8 +183,19 @@ public class Player: MonoBehaviour
 		if (verticalInput > 0)
         {
 			anim.SetBool("IsRunning", true);
-			bodyRenderer.sprite = bodySprites[3];
-			bodyRenderer.size = new Vector2(2.25f, 2.25f);
+
+			if(schoolOutfit)
+            {
+				bodyRenderer.sprite = bodySprites[3];
+				bodyRenderer.size = new Vector2(2.25f, 2.25f);
+            }
+
+			if(!schoolOutfit)
+            {
+				bodyRenderer.sprite = purpleBodySprites[3];
+				bodyRenderer.size = new Vector2(2.35f, 2.35f);
+			}
+
 
 			glassesRenderer.size = new Vector2(0f, 0f);
 			hairRenderer.size = new Vector2(0f, 0f);
@@ -168,8 +204,19 @@ public class Player: MonoBehaviour
 		if (verticalInput < 0)
         {
 			anim.SetBool("IsRunning", true);
-			bodyRenderer.sprite = bodySprites[0];
-			bodyRenderer.size = new Vector2(2f, 2f);
+
+			if(schoolOutfit)
+            {
+				bodyRenderer.sprite = bodySprites[0];
+				bodyRenderer.size = new Vector2(2f, 2f);
+            }
+
+			if (!schoolOutfit)
+			{
+				bodyRenderer.sprite = purpleBodySprites[0];
+				bodyRenderer.size = new Vector2(2.10f, 2.10f);
+			}
+
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);
@@ -178,8 +225,19 @@ public class Player: MonoBehaviour
 		if (horizontalInput == 0 && verticalInput == 0)
         {
 			anim.SetBool("IsRunning", false);
-			bodyRenderer.sprite = bodySprites[0];
-			bodyRenderer.size = new Vector2(2f, 2f);
+
+			if(schoolOutfit)
+            {
+				bodyRenderer.sprite = bodySprites[0];
+				bodyRenderer.size = new Vector2(2f, 2f);
+            }
+
+			if(!schoolOutfit)
+            {
+				bodyRenderer.sprite = purpleBodySprites[0];
+				bodyRenderer.size = new Vector2(2.65f, 2.25f);
+			}
+
 
 			glassesRenderer.size = new Vector2(0.75f, 0.75f);
 			hairRenderer.size = new Vector2(0.75f, 0.75f);

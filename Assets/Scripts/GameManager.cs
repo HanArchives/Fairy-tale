@@ -143,17 +143,17 @@ public class GameManager : MonoBehaviour
             allWizardsDefeated = false;
         }
 
-        if (canSpawnRhea == true)
-        {
-            rheaTimer += Time.deltaTime;
+        //if (canSpawnRhea == true)
+        //{
+            //rheaTimer += Time.deltaTime;
 
-            if(rheaTimer >= 1f && rheaTimer <= 1.02f)
-            {
-                SpawnRhea();
+            //if(rheaTimer >= 1f && rheaTimer <= 1.02f)
+            //{
+                //SpawnRhea();
                 //canSpawnRhea = false;
                 //rheaTimer = 0f;
-            }
-        }
+            //}
+        //}
 
         if(isWalking == true)
         {

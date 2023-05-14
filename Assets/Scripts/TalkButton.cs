@@ -22,6 +22,8 @@ public class TalkButton : MonoBehaviour
     public GameObject thisNPC;
     public Transform thisNPCpos;
 
+    public bool isDrycleaner;
+
     void Start()
     {
         //anim = GameObject.Find("NPCCanvas").GetComponent<Animator>();
