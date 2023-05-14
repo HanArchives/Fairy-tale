@@ -382,8 +382,8 @@ MonoBehaviour:
   thisEnemy: {fileID: 9025378476549497747}
   thisEnemyColl: {fileID: 6556487330340056443}
   knockBack: {fileID: 4649698289532937013}
-  enemyMaxHealth: 3
-  enemyCurrentHealth: 3
+  enemyMaxHealth: 5
+  enemyCurrentHealth: 5
   enemyHealthText: {fileID: 780960359328243269}
   isWizardEnemy: 1
   dropPage: {fileID: 4695412763098798944, guid: bba8caa7235d55f49b7d4c9e079c78ee, type: 3}
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
   player: {fileID: 0}
-  speed: 1
+  speed: 0.75
   playerposition: {x: 0, y: 0, z: 0}
   enemyposition: {x: 0, y: 0, z: 0}
   enemyYposition: 0

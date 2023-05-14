@@ -382,8 +382,8 @@ MonoBehaviour:
   thisEnemy: {fileID: 9025378476549497747}
   thisEnemyColl: {fileID: 6556487330340056443}
   knockBack: {fileID: 4649698289532937013}
-  enemyMaxHealth: 3
-  enemyCurrentHealth: 3
+  enemyMaxHealth: 4
+  enemyCurrentHealth: 4
   enemyHealthText: {fileID: 780960359328243269}
   isWizardEnemy: 1
   dropPage: {fileID: 4695412763098798944, guid: bba8caa7235d55f49b7d4c9e079c78ee, type: 3}
@@ -798,11 +798,11 @@ MonoBehaviour:
   enemyXposition: 0
   distance: 0
   followDistance: 10
-  damageToGive: 1
+  damageToGive: 0.25
   enemyUI: {fileID: 4632897275404061489}
   projectile: {fileID: 5297493942574709003, guid: adc685784f1c80c438d6f98344b3460f, type: 3}
   rb: {fileID: 2207897008655463775}
-  fireRate: 4
+  fireRate: 1
   nextFire: -4
   projectileEnemy: 1
   shootDistance: 10

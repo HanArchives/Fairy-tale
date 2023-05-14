@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2dd7082919e7434caad5dd085dbafcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 13.3
+  changeTime: 19
   sceneName: EndScreen
 --- !u!1 &1495666505
 GameObject:

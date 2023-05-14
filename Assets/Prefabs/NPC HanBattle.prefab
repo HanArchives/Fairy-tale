@@ -791,18 +791,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
   player: {fileID: 0}
-  speed: 1
+  speed: 0.5
   playerposition: {x: 0, y: 0, z: 0}
   enemyposition: {x: 0, y: 0, z: 0}
   enemyYposition: 0
   enemyXposition: 0
   distance: 0
   followDistance: 10
-  damageToGive: 1
+  damageToGive: 2
   enemyUI: {fileID: 4632897275404061489}
   projectile: {fileID: 5297493942574709003, guid: adc685784f1c80c438d6f98344b3460f, type: 3}
   rb: {fileID: 2207897008655463775}
-  fireRate: 4
+  fireRate: 2
   nextFire: -4
   projectileEnemy: 1
   shootDistance: 10

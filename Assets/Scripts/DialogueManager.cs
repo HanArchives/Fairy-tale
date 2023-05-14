@@ -124,6 +124,9 @@ public class DialogueManager : MonoBehaviour
         animator = animator.GetComponent<Animator>();
         */
 
+        animator.SetBool("IsActive", false); // Closes the dialogue box
+
+
         if (talkButton.isBattleEnemy)
         {
             Destroy(thisGameObject.gameObject);
@@ -150,6 +153,11 @@ public class DialogueManager : MonoBehaviour
             animator = animator.GetComponent<Animator>();
 
             talkButton.SpawnEnemy();
+        }
+
+        else
+        {
+            animator.SetBool("IsActive", false); // Closes the dialogue box
         }
     }
 }

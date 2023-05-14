@@ -145,6 +145,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4501050479501575893, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501050479501575893, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501050479501575893, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
       propertyPath: projectileEnemy
       value: 1
       objectReference: {fileID: 0}
@@ -159,6 +167,14 @@ PrefabInstance:
     - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
       propertyPath: isWizardEnemy
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446560041239175612, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
+      propertyPath: enemyCurrentHealth
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8487424304587063622, guid: 9e7443d7b3eac374896afdb4a332a324, type: 3}
       propertyPath: m_IsActive

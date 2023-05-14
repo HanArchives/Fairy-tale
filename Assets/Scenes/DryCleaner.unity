@@ -1640,6 +1640,8 @@ GameObject:
   m_Component:
   - component: {fileID: 524233637}
   - component: {fileID: 524233636}
+  - component: {fileID: 524233638}
+  - component: {fileID: 524233639}
   m_Layer: 0
   m_Name: Light 2D Red (1)
   m_TagString: Untagged
@@ -1741,6 +1743,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &524233638
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524233635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a02126213e26bca42872ee0c88bb968c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &524233639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524233635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56551780efd7a8449847d49a735c519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0.9
 --- !u!1001 &593002909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3740,6 +3776,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1307364031}
   - component: {fileID: 1307364030}
+  - component: {fileID: 1307364032}
+  - component: {fileID: 1307364033}
   m_Layer: 0
   m_Name: Light 2D Red (2)
   m_TagString: Untagged
@@ -3841,6 +3879,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1307364032
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307364029}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a02126213e26bca42872ee0c88bb968c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1307364033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307364029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56551780efd7a8449847d49a735c519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 1.1
 --- !u!1001 &1322544528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3917,6 +3989,7 @@ GameObject:
   - component: {fileID: 1329857370}
   - component: {fileID: 1329857369}
   - component: {fileID: 1329857371}
+  - component: {fileID: 1329857372}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -4039,6 +4112,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1329857372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329857368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56551780efd7a8449847d49a735c519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0.45
 --- !u!1 &1400475248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,7 +4292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[0]
@@ -4214,16 +4300,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[1]
-      value: "That robe? Ah, yes. I apologize but this is not for sale, see it is
-        the official student robe for the magic school. Can I help you with anything
-        else?\r"
+      value: "That robe? Ah, yes. I apologize but this is not for sale.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[2]
-      value: ...why are you looking so evil at me..
+      value: See it is the official student robe for the magic school. Can I help
+        you with anything else?
       objectReference: {fileID: 0}
     - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
       propertyPath: dialogueOption.sentences.Array.data[3]
+      value: ...why are you looking so evil at me..
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998018606350928200, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
+      propertyPath: dialogueOption.sentences.Array.data[4]
       value: "Okay, okay. Take it, take it. Please don\u2019t hurt me!"
       objectReference: {fileID: 0}
     - target: {fileID: 4370539901595691388, guid: 7c1e09a596a10f347b5b59407fbc59ce, type: 3}
@@ -4457,6 +4546,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1617902429}
   - component: {fileID: 1617902428}
+  - component: {fileID: 1617902430}
+  - component: {fileID: 1617902431}
   m_Layer: 0
   m_Name: Light 2D (1)
   m_TagString: Untagged
@@ -4558,6 +4649,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1617902430
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617902427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a02126213e26bca42872ee0c88bb968c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1617902431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617902427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56551780efd7a8449847d49a735c519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0.5
 --- !u!1001 &1623334247
 PrefabInstance:
   m_ObjectHideFlags: 0
